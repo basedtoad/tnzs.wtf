@@ -384,6 +384,8 @@ body {
   }
 }
 
+
+
 /* === Focus Indicators (Accessibility) === */
 :focus-visible {
   outline: 2px solid var(--color-accent);
@@ -427,5 +429,19 @@ body {
 
   .site-footer {
     padding: 0 12px;
+  }
+
+  /* Drawer — fluid type: each word fills the same visual width */
+  .nav-drawer {
+    padding: calc(var(--header-height) + 24px) var(--padding-mobile) 40px;
+  }
+
+  .drawer-links li:nth-child(1) .drawer-link { font-size: 14vw; } /* Work */
+  .drawer-links li:nth-child(2) .drawer-link { font-size: 11vw; } /* About */
+  .drawer-links li:nth-child(3) .drawer-link { font-size: 8vw;  } /* Contact */
+
+  .drawer-link {
+    line-height: 1.1;
+    padding: 8px 0;
   }
 }
