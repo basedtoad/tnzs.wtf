@@ -428,6 +428,10 @@
     padding: 80px var(--padding-mobile) 40px;
   }
 
+  .hero-headline {
+    font-size: 8vw;
+  }
+
   .contact-section {
     padding: 0 var(--padding-mobile) 64px;
   }
