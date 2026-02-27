@@ -10,7 +10,7 @@
   'use strict';
 
   var BP = 768;
-  var HEADING_SELECTORS = '.hero-headline, .project-title';
+  var HEADING_SELECTORS = '.about-headline, .hero-headline, .project-title';
   var LINK_SELECTORS    = '.drawer-link';
 
   function isMobile() { return window.innerWidth <= BP; }
@@ -126,7 +126,7 @@
       span.setAttribute('data-fit-line', '');
       span.style.display    = 'block';
       span.style.whiteSpace = 'nowrap';
-      span.style.overflow   = 'visible';
+      span.style.overflow   = 'hidden';
       span.style.fontSize   = '8px';
 
       if (seg.type === 'text') {
