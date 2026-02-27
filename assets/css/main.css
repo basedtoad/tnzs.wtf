@@ -431,14 +431,10 @@ body {
     padding: 0 12px;
   }
 
-  /* Drawer — fluid type: each word fills the same visual width */
+  /* Drawer — JS (fitHeadings.js) handles per-link sizing on mobile */
   .nav-drawer {
     padding: calc(var(--header-height) + 24px) var(--padding-mobile) 40px;
   }
-
-  .drawer-links li:nth-child(1) .drawer-link { font-size: 14vw; } /* Work */
-  .drawer-links li:nth-child(2) .drawer-link { font-size: 11vw; } /* About */
-  .drawer-links li:nth-child(3) .drawer-link { font-size: 8vw;  } /* Contact */
 
   .drawer-link {
     line-height: 1.1;

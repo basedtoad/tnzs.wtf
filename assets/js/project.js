@@ -65,6 +65,9 @@
 
   contentEl.classList.remove('project-loading');
 
+  /* Fit project title to viewport width on mobile */
+  if (window.fitHeadingsMobile) window.fitHeadingsMobile();
+
   /* --- Apply current language to translated content fields --- */
   function applyContentLang(lang) {
     contentEl.querySelectorAll('[data-en][data-es]').forEach(function (el) {

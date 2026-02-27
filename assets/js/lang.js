@@ -13,7 +13,7 @@
       'nav.contact': 'Contact',
 
       /* Hero */
-      'hero.scroll': 'scroll',
+      'hero.scroll': 'Let\'s build something cute',
 
       /* About page */
       'about.eyebrow':              'About',
@@ -27,7 +27,7 @@
       'about.contact.label':        'Contact',
       'about.software':             'Software',
       'about.getInTouch':           'Get in touch',
-      'about.letsWork':             'Let\'s work together',
+      'about.letsWork':             'Let\'s build something cute',
 
       /* Contact page */
       'contact.eyebrow':      'Get in touch',
@@ -75,7 +75,7 @@
       'nav.contact': 'Contacto',
 
       /* Hero */
-      'hero.scroll': 'bajar',
+      'hero.scroll': 'Hagamos algo lindo',
 
       /* About page */
       'about.eyebrow':              'Sobre m\u00ed',
@@ -89,7 +89,7 @@
       'about.contact.label':        'Contacto',
       'about.software':             'Software',
       'about.getInTouch':           'Contactar',
-      'about.letsWork':             'Trabajemos juntos',
+      'about.letsWork':             'Hagamos algo lindo',
 
       /* Contact page */
       'contact.eyebrow':      'Hablemos',
