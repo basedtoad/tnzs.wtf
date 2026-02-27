@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "site_name": "tnzs",
+    "tagline": "Creative & Brand Design",
+    "author": "BT",
+    "description": "Portfolio of branding, illustration, and design work",
+    "keywords": ["branding", "design", "illustration", "typography", "costa rica"],
+    "social_links": {
+      "instagram": "https://instagram.com/tnzs",
+      "email": "contact@tnzs.wtf",
+      "behance": null,
+      "linkedin": null
+    }
+  },
+  "design_tokens": {
+    "global_colors": {
+      "primary_bg": "#03318C",
+      "primary_text": "#FFFFFF",
+      "accent": "#F280AA",
+      "secondary_accent": "#FFFFFF",
+      "grid_bg": "#03318C",
+      "card_hover": "rgba(242, 128, 170, 0.1)"
+    },
+    "global_typography": {
+      "heading_font": "Inter, system-ui, sans-serif",
+      "body_font": "Inter, system-ui, sans-serif",
+      "mono_font": "JetBrains Mono, monospace",
+      "heading_weight": "700",
+      "body_weight": "400"
+    },
+    "grid_config": {
+      "layout_type": "masonry",
+      "columns_desktop": 4,
+      "columns_tablet": 3,
+      "columns_mobile": 2,
+      "gap_horizontal": "32px",
+      "gap_vertical": "32px",
+      "container_max_width": "1600px",
+      "padding_desktop": "80px",
+      "padding_tablet": "48px",
+      "padding_mobile": "24px",
+      "column_width": "auto",
+      "item_sizing": "content-based"
+    },
+    "transitions": {
+      "hover_duration": "0.3s",
+      "page_transition": "0.4s",
+      "ease": "cubic-bezier(0.4, 0, 0.2, 1)"
+    }
+  },
+  "categories": [
+    { "slug": "all",          "label": "All Projects",  "description": "Complete portfolio" },
+    { "slug": "branding",     "label": "Branding",      "description": "Identity systems and visual branding" },
+    { "slug": "illustration", "label": "Illustration",  "description": "Custom illustrations and artwork" },
+    { "slug": "web",          "label": "Web Design",    "description": "Digital interfaces and web experiences" },
+    { "slug": "packaging",    "label": "Packaging",     "description": "Product packaging and label design" }
+  ],
+  "features": {
+    "filtering": {
+      "enabled": true,
+      "type": "category-based",
+      "show_all_option": true,
+      "animation": "fade"
+    },
+    "interactions": {
+      "grid_hover": "scale + overlay",
+      "page_transitions": "fade",
+      "smooth_scroll": true,
+      "back_to_top": false
+    },
+    "accessibility": {
+      "alt_text_required": true,
+      "focus_indicators": true,
+      "keyboard_navigation": true,
+      "aria_labels": true,
+      "reduced_motion": "respects prefers-reduced-motion"
+    },
+    "seo": {
+      "meta_tags": true,
+      "open_graph": true,
+      "structured_data": false,
+      "sitemap": false
+    },
+    "performance": {
+      "lazy_loading": true,
+      "image_optimization": "webp with fallback",
+      "minification": "recommended for production",
+      "caching_strategy": "leverage browser cache"
+    }
+  }
+}

@@ -1,0 +1,130 @@
+/* ==========================================================================
+   grid.css — Masonry grid, grid items, hover effects
+   ========================================================================== */
+
+/* === Grid Container === */
+.grid-container {
+  padding: 48px 24px 80px;
+}
+
+/* === Masonry Grid (CSS columns) === */
+.masonry-grid {
+  column-count: 4;
+  column-gap: 20px;
+}
+
+/* === Grid Item === */
+.grid-item {
+  break-inside: avoid;
+  margin-bottom: var(--gap);
+}
+
+/* === Item Link Wrapper === */
+.item-link {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+/* === Item Image Container (natural aspect ratio) === */
+.item-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-height: 600px;
+}
+
+.item-image-wrapper img,
+.item-image-wrapper video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* === Item Hover Overlay === */
+.item-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.35s var(--ease);
+}
+
+.item-title {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  color: #fff;
+  text-align: center;
+  padding: 0 1.25rem;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  text-shadow: 0 1px 16px rgba(0, 0, 0, 0.6);
+}
+
+/* === Hover State === */
+.item-image-wrapper img,
+.item-image-wrapper video {
+  transition: filter 0.4s var(--ease), transform 0.4s var(--ease);
+}
+
+.item-link:hover .item-image-wrapper img,
+.item-link:focus-visible .item-image-wrapper img,
+.item-link:hover .item-image-wrapper video,
+.item-link:focus-visible .item-image-wrapper video {
+  filter: blur(14px);
+}
+
+.item-link:hover .item-overlay,
+.item-link:focus-visible .item-overlay {
+  opacity: 1;
+}
+
+/* === Empty State === */
+.grid-empty {
+  column-span: all;
+  text-align: center;
+  padding: 80px 0;
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 0.875rem;
+  letter-spacing: 0.03em;
+}
+
+/* === Error State === */
+.grid-error {
+  column-span: all;
+  text-align: center;
+  padding: 80px 0;
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 0.875rem;
+}
+
+/* === Tablet (≤1024px) === */
+@media (max-width: 1024px) {
+  .masonry-grid {
+    column-count: 3;
+  }
+
+  .grid-container {
+    padding: 40px 20px 60px;
+  }
+}
+
+/* === Mobile (≤768px) === */
+@media (max-width: 768px) {
+  .masonry-grid {
+    column-count: 2;
+    column-gap: 12px;
+  }
+
+  .grid-item {
+    margin-bottom: 12px;
+  }
+
+  .grid-container {
+    padding: 32px 12px 48px;
+  }
+}

@@ -1,0 +1,906 @@
+[
+  {
+    "project_meta": {
+      "id": "project-011",
+      "slug": "ratas",
+      "title": "Ratas",
+      "subtitle": "Pixel Cut Illustration",
+      "subtitle_es": "Ilustración Pixel Cut",
+      "category": "illustration",
+      "tags": [
+        "pixel art",
+        "illustration",
+        "affinity designer"
+      ],
+      "year": 2025,
+      "status": "published",
+      "featured": false,
+      "order": 1
+    },
+    "grid_item": {
+      "thumbnail": "/assets/images/projects/ratas/ratas.webp",
+      "thumbnail_alt": "Ratas — pixel cut illustration",
+      "item_size": "medium",
+      "hover_caption": "View Project"
+    },
+    "project_page": {
+      "page_design": {
+        "background_color": "#0d0d0d",
+        "text_color": "#f0f0f0",
+        "accent_color": "#F280AA",
+        "heading_font": null,
+        "body_font": null,
+        "custom_css": null
+      },
+      "hero": {
+        "hero_image": "/assets/images/projects/ratas/heroRatas.webp",
+        "hero_alt": "Ratas — pixel cut illustration",
+        "layout": "full-bleed"
+      },
+      "content": {
+        "brief": "Pixel illustration made in Affinity Designer. Pixel cut is a personal style — like lino cut, but built with pixels: hard edges, limited palette, graphic texture.",
+        "brief_es": "Ilustración pixel hecha en Affinity Designer. El pixel cut es un estilo personal — como el lino cut, pero construido con píxeles: bordes duros, paleta limitada, textura gráfica.",
+        "client": "Personal Project",
+        "role": [
+          "Illustrator"
+        ],
+        "deliverables": [
+          "Pixel illustration"
+        ],
+        "tools": [
+          "Affinity Designer"
+        ],
+        "duration": null,
+        "project_url": null
+      },
+      "gallery": {
+        "images": [
+          {
+            "src": "/assets/images/projects/ratas/ratas.webp",
+            "alt": "Ratas — pixel cut illustration",
+            "caption": null,
+            "layout": "full"
+          },
+          {
+            "src": "/assets/images/projects/ratas/heroRatas.webp",
+            "alt": "Ratas — pixel cut illustration",
+            "caption": null,
+            "layout": "full"
+          },
+          {
+            "src": "/assets/images/projects/ratas/RATStShirtMockupFront1.webp",
+            "alt": "Ratas t-shirt mockup",
+            "caption": null,
+            "layout": "full"
+          }
+        ]
+      },
+      "process": {
+        "enabled": false,
+        "sections": []
+      },
+      "navigation": {
+        "prev_project": null,
+        "next_project": "project-013"
+      }
+    }
+  },
+  {
+    "project_meta": {
+      "id": "project-009",
+      "slug": "chia-app",
+      "title": "Chia App",
+      "subtitle": "UI & Brand Identity",
+      "subtitle_es": "UI e Identidad de Marca",
+      "category": "branding",
+      "tags": [
+        "app",
+        "ui",
+        "brand"
+      ],
+      "year": 2024,
+      "status": "published",
+      "featured": false,
+      "order": 3
+    },
+    "grid_item": {
+      "thumbnail": "/assets/images/projects/chiaApp/gridChiaApp6.png",
+      "thumbnail_alt": "Chia app interface screens",
+      "item_size": "medium",
+      "hover_caption": "View Project"
+    },
+    "project_page": {
+      "page_design": {
+        "background_color": "#141414",
+        "text_color": "#ffffff",
+        "accent_color": "#F280AA",
+        "heading_font": null,
+        "body_font": null,
+        "custom_css": null
+      },
+      "hero": {
+        "hero_image": "/assets/images/projects/chiaApp/heroChiaApp7.png",
+        "hero_alt": "Chia app hero image",
+        "layout": "full-bleed"
+      },
+      "content": {
+        "brief": "Replace this with your project description — the challenge, your approach, and the outcome. Keep it to two or three sentences.",
+        "brief_es": "Reemplaza esto con la descripción de tu proyecto — el reto, tu enfoque y el resultado. Dos o tres oraciones bastan.",
+        "client": "Personal Project",
+        "role": [
+          "UI Designer",
+          "Brand Designer"
+        ],
+        "deliverables": [
+          "App UI",
+          "Brand identity",
+          "Icon design"
+        ],
+        "tools": [
+          "Figma",
+          "Illustrator"
+        ],
+        "duration": null,
+        "project_url": null
+      },
+      "gallery": {
+        "images": [
+          {
+            "src": "/assets/images/projects/chiaApp/chiaApp.png",
+            "alt": "Chia app screen",
+            "caption": null,
+            "layout": "full"
+          },
+          {
+            "src": "/assets/images/projects/chiaApp/chiaApp1.png",
+            "alt": "Chia app screen",
+            "caption": null,
+            "layout": "full"
+          },
+          {
+            "src": "/assets/images/projects/chiaApp/chiaApp2.png",
+            "alt": "Chia app screen",
+            "caption": null,
+            "layout": "half"
+          },
+          {
+            "src": "/assets/images/projects/chiaApp/chiaApp3.png",
+            "alt": "Chia app screen",
+            "caption": null,
+            "layout": "half"
+          },
+          {
+            "src": "/assets/images/projects/chiaApp/chiaApp4.jpg",
+            "alt": "Chia app screen",
+            "caption": null,
+            "layout": "full"
+          },
+          {
+            "src": "/assets/images/projects/chiaApp/chiaApp5.jpg",
+            "alt": "Chia app screen",
+            "caption": null,
+            "layout": "full"
+          },
+          {
+            "src": "/assets/images/projects/chiaApp/gridChiaApp6.png",
+            "alt": "Chia app screen",
+            "caption": null,
+            "layout": "half"
+          },
+          {
+            "src": "/assets/images/projects/chiaApp/heroChiaApp7.png",
+            "alt": "Chia app screen",
+            "caption": null,
+            "layout": "half"
+          },
+          {
+            "src": "/assets/images/projects/chiaApp/chiaApp8.png",
+            "alt": "Chia app screen",
+            "caption": null,
+            "layout": "full"
+          },
+          {
+            "src": "/assets/images/projects/chiaApp/chiaApp9.png",
+            "alt": "Chia app screen",
+            "caption": null,
+            "layout": "half"
+          },
+          {
+            "src": "/assets/images/projects/chiaApp/chiaApp10.png",
+            "alt": "Chia app screen",
+            "caption": null,
+            "layout": "half"
+          }
+        ]
+      },
+      "process": {
+        "enabled": false,
+        "sections": []
+      },
+      "navigation": {
+        "prev_project": "project-013",
+        "next_project": "project-014"
+      }
+    }
+  },
+  {
+    "project_meta": {
+      "id": "project-010",
+      "slug": "vvvvv-design-system",
+      "title": "vvvvv Design System",
+      "subtitle": "UI Component Library & Design Tokens",
+      "subtitle_es": "Librería de Componentes UI & Design Tokens",
+      "category": "ui design",
+      "tags": [
+        "design system",
+        "ui",
+        "figma",
+        "components"
+      ],
+      "year": 2024,
+      "status": "published",
+      "featured": false,
+      "order": 6
+    },
+    "grid_item": {
+      "thumbnail": "/assets/images/projects/figmaDesignSystem/mockupn0text.png",
+      "thumbnail_alt": "vvvvv design system component sheets mockup",
+      "item_size": "medium",
+      "hover_caption": "View Project"
+    },
+    "project_page": {
+      "page_design": {
+        "background_color": "#0f0f0f",
+        "text_color": "#f5f5f0",
+        "accent_color": "#f0c000",
+        "heading_font": null,
+        "body_font": null,
+        "custom_css": null
+      },
+      "hero": {
+        "hero_image": "/assets/images/projects/figmaDesignSystem/mockupn0text.png",
+        "hero_alt": "vvvvv design system overview mockup",
+        "layout": "contained"
+      },
+      "content": {
+        "brief": "A comprehensive Figma design system built for vvvvv — covering color tokens, typography scales, and a full component library with dark and light mode support across buttons, inputs, checkboxes, and more.",
+        "brief_es": "Sistema de diseño completo en Figma para vvvvv — con tokens de color, escalas tipográficas y una librería de componentes con soporte de modo oscuro y claro en botones, campos de entrada, checkboxes y más.",
+        "client": "vvvvv",
+        "role": [
+          "UI Designer",
+          "Design Systems"
+        ],
+        "deliverables": [
+          "Color token system",
+          "Typography scale",
+          "Component library",
+          "Dark & light mode"
+        ],
+        "tools": [
+          "Figma"
+        ],
+        "duration": null,
+        "project_url": null
+      },
+      "gallery": {
+        "images": [
+          {
+            "src": "/assets/images/projects/figmaDesignSystem/mockupn0text.png",
+            "alt": "vvvvv design system overview mockup",
+            "caption": null,
+            "layout": "full"
+          },
+          {
+            "src": "/assets/images/projects/figmaDesignSystem/colores.png",
+            "alt": "Full color palette — rojo, amarillo, hueso, turquesa, error, éxito, alerta, escala gris",
+            "caption": null,
+            "layout": "half"
+          },
+          {
+            "src": "/assets/images/projects/figmaDesignSystem/color tokens.png",
+            "alt": "Semantic color tokens mapped to surface, border, and text roles",
+            "caption": null,
+            "layout": "half"
+          },
+          {
+            "src": "/assets/images/projects/figmaDesignSystem/tipografías.png",
+            "alt": "Typography scale — Sofia Pro and Reross Quadratic",
+            "caption": null,
+            "layout": "half"
+          },
+          {
+            "src": "/assets/images/projects/figmaDesignSystem/botones.png",
+            "alt": "Button component library — all sizes, states, and variants",
+            "caption": null,
+            "layout": "half"
+          },
+          {
+            "src": "/assets/images/projects/figmaDesignSystem/campos de entrada.png",
+            "alt": "Input fields in dark and light mode",
+            "caption": null,
+            "layout": "half"
+          },
+          {
+            "src": "/assets/images/projects/figmaDesignSystem/checkRadios.png",
+            "alt": "Checkbox and radio components in dark and light mode",
+            "caption": null,
+            "layout": "half"
+          },
+          {
+            "src": "/assets/images/projects/figmaDesignSystem/efectos.png",
+            "alt": "Elevation and shadow effects",
+            "caption": null,
+            "layout": "full"
+          }
+        ]
+      },
+      "process": {
+        "enabled": false,
+        "sections": []
+      },
+      "navigation": {
+        "prev_project": "project-012",
+        "next_project": "project-015"
+      }
+    }
+  },
+  {
+    "project_meta": {
+      "id": "project-013",
+      "slug": "v60-tutorial",
+      "title": "V60 Tutorial",
+      "subtitle": "2D Animation",
+      "subtitle_es": "Animación 2D",
+      "category": "animation",
+      "tags": [
+        "animation",
+        "motion",
+        "illustration"
+      ],
+      "year": 2023,
+      "status": "published",
+      "featured": false,
+      "order": 2
+    },
+    "grid_item": {
+      "thumbnail": "/assets/images/projects/v60Tutorial/gridV60Tutorial.jpg",
+      "thumbnail_alt": "V60 pour over coffee tutorial animation",
+      "item_size": "medium",
+      "hover_caption": "View Project"
+    },
+    "project_page": {
+      "page_design": {
+        "background_color": "#0f0c09",
+        "text_color": "#f0ebe4",
+        "accent_color": "#F280AA",
+        "heading_font": null,
+        "body_font": null,
+        "custom_css": null
+      },
+      "hero": {
+        "hero_image": "/assets/images/projects/v60Tutorial/heroCupOfCoffee.jpg",
+        "hero_alt": "V60 pour over coffee tutorial animation",
+        "layout": "full-bleed",
+        "hero_blur": true
+      },
+      "content": {
+        "brief": "2D animation explaining how to brew pour over coffee with a V60 dripper. Made in After Effects and Illustrator.",
+        "brief_es": "Animación 2D que explica cómo preparar café de goteo con un V60. Hecha en After Effects e Illustrator.",
+        "client": "Personal Project",
+        "role": [
+          "Animator",
+          "Illustrator"
+        ],
+        "deliverables": [
+          "2D animation"
+        ],
+        "tools": [
+          "After Effects",
+          "Illustrator"
+        ],
+        "duration": null,
+        "project_url": "https://youtu.be/mTjviYQkahs",
+        "youtube_embed": "mTjviYQkahs"
+      },
+      "gallery": {
+        "images": [
+          {
+            "src": "/assets/images/projects/v60Tutorial/heroCupOfCoffee.jpg",
+            "alt": "V60 tutorial animation still",
+            "caption": null,
+            "layout": "half"
+          },
+          {
+            "src": "/assets/images/projects/v60Tutorial/gridV60Tutorial.jpg",
+            "alt": "V60 tutorial animation still",
+            "caption": null,
+            "layout": "half"
+          }
+        ]
+      },
+      "process": {
+        "enabled": false,
+        "sections": []
+      },
+      "navigation": {
+        "prev_project": "project-011",
+        "next_project": "project-009"
+      }
+    }
+  },
+  {
+    "project_meta": {
+      "id": "project-012",
+      "slug": "el-secuestro",
+      "title": "El Secuestro",
+      "subtitle": "Short Film",
+      "subtitle_es": "Cortometraje",
+      "category": "film",
+      "tags": [
+        "film",
+        "short film",
+        "direction"
+      ],
+      "year": 2019,
+      "status": "published",
+      "featured": false,
+      "order": 5
+    },
+    "grid_item": {
+      "thumbnail": "/assets/images/projects/elSecuestro/gridCatPoster.png",
+      "thumbnail_alt": "El Secuestro short film poster",
+      "item_size": "medium",
+      "hover_caption": "View Project"
+    },
+    "project_page": {
+      "page_design": {
+        "background_color": "#0a0a0a",
+        "text_color": "#f0f0f0",
+        "accent_color": "#F280AA",
+        "heading_font": null,
+        "body_font": null,
+        "custom_css": null
+      },
+      "hero": {
+        "hero_video": "/assets/videos/heroVideoElSecuestro.mp4",
+        "hero_image": null,
+        "hero_alt": "El Secuestro short film",
+        "layout": "full-bleed"
+      },
+      "content": {
+        "brief": "El Secuestro is a rotoscopy animation short film from 2019. Each frame was hand-traced over live-action footage, then composited and edited into a complete animated film.",
+        "brief_es": "El Secuestro es un cortometraje de animación por rotoscopía de 2019. Cada fotograma fue trazado a mano sobre imágenes reales, luego compositado y editado en una película animada completa.",
+        "client": "Personal Project",
+        "role": [
+          "Director",
+          "Animator"
+        ],
+        "deliverables": [
+          "Short film"
+        ],
+        "tools": [
+          "Photoshop",
+          "Open Toonz",
+          "Premiere",
+          "After Effects",
+          "Pro Tools"
+        ],
+        "duration": null,
+        "project_url": "https://youtu.be/FI55WDjWDhg",
+        "youtube_embed": "FI55WDjWDhg"
+      },
+      "gallery": {
+        "images": [
+          {
+            "src": "/assets/images/projects/elSecuestro/piesTítulo.png",
+            "alt": "El Secuestro still",
+            "caption": null,
+            "layout": "full"
+          },
+          {
+            "src": "/assets/images/projects/elSecuestro/Gato.png",
+            "alt": "El Secuestro still",
+            "caption": null,
+            "layout": "half"
+          },
+          {
+            "src": "/assets/images/projects/elSecuestro/durmiéndose.png",
+            "alt": "El Secuestro still",
+            "caption": null,
+            "layout": "half"
+          },
+          {
+            "src": "/assets/images/projects/elSecuestro/medioDormido.png",
+            "alt": "El Secuestro still",
+            "caption": null,
+            "layout": "half"
+          },
+          {
+            "src": "/assets/images/projects/elSecuestro/ventanaAbierta.png",
+            "alt": "El Secuestro still",
+            "caption": null,
+            "layout": "half"
+          },
+          {
+            "src": "/assets/images/projects/elSecuestro/nave.png",
+            "alt": "El Secuestro still",
+            "caption": null,
+            "layout": "full"
+          },
+          {
+            "src": "/assets/images/projects/elSecuestro/tentáculo.png",
+            "alt": "El Secuestro still",
+            "caption": null,
+            "layout": "half"
+          },
+          {
+            "src": "/assets/images/projects/elSecuestro/grifo.png",
+            "alt": "El Secuestro still",
+            "caption": null,
+            "layout": "half"
+          },
+          {
+            "src": "/assets/images/projects/elSecuestro/tomaAgua.png",
+            "alt": "El Secuestro still",
+            "caption": null,
+            "layout": "half"
+          },
+          {
+            "src": "/assets/images/projects/elSecuestro/pies.png",
+            "alt": "El Secuestro still",
+            "caption": null,
+            "layout": "half"
+          },
+          {
+            "src": "/assets/images/projects/elSecuestro/gridCatPoster.png",
+            "alt": "El Secuestro still",
+            "caption": null,
+            "layout": "full"
+          }
+        ]
+      },
+      "process": {
+        "enabled": false,
+        "sections": []
+      },
+      "navigation": {
+        "prev_project": "project-014",
+        "next_project": "project-010"
+      }
+    }
+  },
+  {
+    "project_meta": {
+      "id": "project-014",
+      "slug": "menergy-step",
+      "title": "Menergy Step",
+      "subtitle": "Animated Infographic",
+      "subtitle_es": "Infografía Animada",
+      "category": "animation",
+      "tags": [
+        "animation",
+        "motion",
+        "infographic"
+      ],
+      "year": 2024,
+      "status": "published",
+      "featured": false,
+      "order": 4
+    },
+    "grid_item": {
+      "thumbnail": "/assets/images/projects/menergyStep/gridMenergyStep.png",
+      "thumbnail_alt": "Menergy Step animated infographic about piezoelectric tiles",
+      "item_size": "medium",
+      "hover_caption": "View Project"
+    },
+    "project_page": {
+      "page_design": {
+        "background_color": "#0a0a0a",
+        "text_color": "#f0f0f0",
+        "accent_color": "#F280AA",
+        "heading_font": null,
+        "body_font": null,
+        "custom_css": null
+      },
+      "hero": {
+        "hero_image": "/assets/images/projects/menergyStep/heroMenergyStep.png",
+        "hero_alt": "Menergy Step animated infographic",
+        "layout": "full-bleed"
+      },
+      "content": {
+        "brief": "Animated infographic explaining how piezoelectric tiles generate energy from footsteps. Made in After Effects and Illustrator.",
+        "brief_es": "Infografía animada que explica cómo los pisos piezoeléctricos generan energía con cada paso. Hecha en After Effects e Illustrator.",
+        "client": "Personal Project",
+        "role": [
+          "Animator",
+          "Illustrator"
+        ],
+        "deliverables": [
+          "Animated infographic"
+        ],
+        "tools": [
+          "After Effects",
+          "Illustrator"
+        ],
+        "duration": null,
+        "project_url": "https://youtu.be/hmt-i_LSyZk",
+        "youtube_embed": "hmt-i_LSyZk"
+      },
+      "gallery": {
+        "images": [
+          {
+            "src": "/assets/images/projects/menergyStep/moodboard.png",
+            "alt": "Menergy Step moodboard",
+            "caption": null,
+            "layout": "full"
+          },
+          {
+            "src": "/assets/images/projects/menergyStep/heroMenergyStep.png",
+            "alt": "Menergy Step animation still",
+            "caption": null,
+            "layout": "half"
+          },
+          {
+            "src": "/assets/images/projects/menergyStep/gridMenergyStep.png",
+            "alt": "Menergy Step animation still",
+            "caption": null,
+            "layout": "half"
+          }
+        ]
+      },
+      "process": {
+        "enabled": false,
+        "sections": []
+      },
+      "navigation": {
+        "prev_project": "project-009",
+        "next_project": "project-012"
+      }
+    }
+  },
+  {
+    "project_meta": {
+      "id": "project-015",
+      "slug": "soy-del-puerto",
+      "title": "Soy del Puerto",
+      "subtitle": "T-Shirt Design",
+      "subtitle_es": "Diseño de Camiseta",
+      "category": "graphic design",
+      "tags": [
+        "apparel",
+        "illustration",
+        "branding"
+      ],
+      "year": 2024,
+      "status": "published",
+      "featured": false,
+      "order": 7
+    },
+    "grid_item": {
+      "thumbnail": "/assets/images/projects/soyDelPuerto/gridPuerto.png",
+      "thumbnail_alt": "Soy del Puerto t-shirt design for Yo Amo Puntarenas",
+      "item_size": "medium",
+      "hover_caption": "View Project"
+    },
+    "project_page": {
+      "page_design": {
+        "background_color": "#0d0d0d",
+        "text_color": "#f0f0f0",
+        "accent_color": "#F280AA",
+        "heading_font": null,
+        "body_font": null,
+        "custom_css": null
+      },
+      "hero": {
+        "hero_image": "/assets/images/projects/soyDelPuerto/heroPuerto.png",
+        "hero_alt": "Soy del Puerto t-shirt design",
+        "layout": "contained"
+      },
+      "content": {
+        "brief": "T-shirt design for Yo Amo Puntarenas, a brand celebrating Costa Rica's port city. Made with Illustrator and Photoshop.",
+        "brief_es": "Diseño de camiseta para Yo Amo Puntarenas, una marca que celebra la ciudad portuaria de Costa Rica. Hecho con Illustrator y Photoshop.",
+        "client": "Yo Amo Puntarenas",
+        "role": [
+          "Graphic Designer",
+          "Illustrator"
+        ],
+        "deliverables": [
+          "T-shirt graphic"
+        ],
+        "tools": [
+          "Illustrator",
+          "Photoshop"
+        ],
+        "duration": null,
+        "project_url": null
+      },
+      "gallery": {
+        "images": [
+          {
+            "src": "/assets/images/projects/soyDelPuerto/puerto.png",
+            "alt": "Soy del Puerto design",
+            "caption": null,
+            "layout": "full"
+          },
+          {
+            "src": "/assets/images/projects/soyDelPuerto/heroPuerto.png",
+            "alt": "Soy del Puerto design",
+            "caption": null,
+            "layout": "half"
+          },
+          {
+            "src": "/assets/images/projects/soyDelPuerto/gridPuerto.png",
+            "alt": "Soy del Puerto design",
+            "caption": null,
+            "layout": "half"
+          }
+        ]
+      },
+      "process": {
+        "enabled": false,
+        "sections": []
+      },
+      "navigation": {
+        "prev_project": "project-010",
+        "next_project": "project-016"
+      }
+    }
+  },
+  {
+    "project_meta": {
+      "id": "project-016",
+      "slug": "el-zanate",
+      "title": "El Zanate",
+      "subtitle": "Pixel Cut Illustration",
+      "subtitle_es": "Ilustración Pixel Cut",
+      "category": "illustration",
+      "tags": [
+        "pixel art",
+        "illustration",
+        "photoshop"
+      ],
+      "year": 2023,
+      "status": "published",
+      "featured": false,
+      "order": 8
+    },
+    "grid_item": {
+      "thumbnail": "/assets/images/projects/elZanate/gridHeroZanateeIllustWhite.webp",
+      "thumbnail_alt": "El Zanate — pixel cut illustration",
+      "item_size": "medium",
+      "hover_caption": "View Project"
+    },
+    "project_page": {
+      "page_design": {
+        "background_color": "#0d0d0d",
+        "text_color": "#f0f0f0",
+        "accent_color": "#F280AA",
+        "heading_font": null,
+        "body_font": null,
+        "custom_css": null
+      },
+      "hero": {
+        "hero_image": "/assets/images/projects/elZanate/gridHeroZanateeIllustWhite.webp",
+        "hero_alt": "El Zanate — pixel cut illustration",
+        "layout": "full-bleed"
+      },
+      "content": {
+        "brief": "Pixel cut illustration of a zanate bird formed in the negative space of an endless array of tree branches. Hard edges and a limited palette define the form through absence rather than presence.",
+        "brief_es": "Ilustración pixel cut de un zanate formado en el espacio negativo de una red infinita de ramas de árbol. Bordes duros y paleta limitada definen la forma a través de la ausencia más que de la presencia.",
+        "client": "Personal Project",
+        "role": [
+          "Illustrator"
+        ],
+        "deliverables": [
+          "Pixel illustration"
+        ],
+        "tools": [
+          "Photoshop"
+        ],
+        "duration": null,
+        "project_url": null
+      },
+      "gallery": {
+        "images": [
+          {
+            "src": "/assets/images/projects/elZanate/gridHeroZanateeIllustWhite.webp",
+            "alt": "El Zanate — pixel cut illustration",
+            "caption": null,
+            "layout": "full"
+          },
+          {
+            "src": "/assets/images/projects/elZanate/hoodieMockupBackZanateeSmol.png",
+            "alt": "El Zanate hoodie mockup",
+            "caption": null,
+            "layout": "full"
+          }
+        ]
+      },
+      "process": {
+        "enabled": false,
+        "sections": []
+      },
+      "navigation": {
+        "prev_project": "project-015",
+        "next_project": "project-017"
+      }
+    }
+  },
+  {
+    "project_meta": {
+      "id": "project-017",
+      "slug": "encendedor",
+      "title": "Encendedor",
+      "subtitle": "Rotoscopy Animation",
+      "subtitle_es": "Animación por Rotoscopía",
+      "category": "animation",
+      "tags": [
+        "animation",
+        "rotoscopy",
+        "krita"
+      ],
+      "year": 2023,
+      "status": "published",
+      "featured": false,
+      "order": 9
+    },
+    "grid_item": {
+      "thumbnail": "/assets/images/projects/encendedor/gridEncendedor.png",
+      "thumbnail_video": "/assets/videos/projects/encendedor/encendedor.mp4",
+      "thumbnail_alt": "Encendedor — rotoscopy animation of a lighter",
+      "item_size": "medium",
+      "hover_caption": "View Project"
+    },
+    "project_page": {
+      "page_design": {
+        "background_color": "#0d0d0d",
+        "text_color": "#f0f0f0",
+        "accent_color": "#F280AA",
+        "heading_font": null,
+        "body_font": null,
+        "custom_css": null
+      },
+      "hero": {
+        "hero_video": "/assets/videos/projects/encendedor/encendedor.mp4",
+        "hero_image": null,
+        "hero_alt": "Encendedor — rotoscopy animation of a lighter being turned on",
+        "layout": "full-bleed"
+      },
+      "content": {
+        "brief": "Short rotoscopy animation of a lighter being turned on. Each frame hand-traced in Krita over reference footage.",
+        "brief_es": "Pequeña animación por rotoscopía de un encendedor siendo encendido. Cada fotograma trazado a mano en Krita sobre material de referencia.",
+        "client": "Personal Project",
+        "role": [
+          "Animator"
+        ],
+        "deliverables": [
+          "Rotoscopy animation"
+        ],
+        "tools": [
+          "Krita"
+        ],
+        "duration": null,
+        "project_url": null
+      },
+      "gallery": {
+        "images": [
+          {
+            "src": "/assets/videos/projects/encendedor/encendedor.mp4",
+            "type": "video",
+            "alt": "Encendedor — rotoscopy animation",
+            "caption": null,
+            "layout": "full"
+          }
+        ]
+      },
+      "process": {
+        "enabled": false,
+        "sections": []
+      },
+      "navigation": {
+        "prev_project": "project-016",
+        "next_project": null
+      }
+    }
+  }
+]

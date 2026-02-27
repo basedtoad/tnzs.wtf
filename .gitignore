@@ -1,0 +1,22 @@
+# Environment / secrets
+.env
+.env.*
+
+# Node
+node_modules/
+
+# Dev tooling (not needed in repo)
+airtable-check.mjs
+airtable-populate.mjs
+airtable-setup.mjs
+serve.json
+
+# Claude internal
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temp screenshots
+temporary screenshots/

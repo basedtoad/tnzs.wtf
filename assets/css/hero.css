@@ -1,0 +1,289 @@
+/* ==========================================================================
+   hero.css — Fullscreen video hero + scroll-triggered nav
+   ========================================================================== */
+
+/* === Hero Section === */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 500px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-bg);
+}
+
+/*
+ * Vignette — radial gradient that fades the blurred video edges smoothly
+ * into the page background, replacing the hard blur-edge artifact with a
+ * soft atmospheric dissolve.
+ */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 75% 75% at 50% 50%,
+    transparent 30%,
+    rgba(20, 20, 20, 0.6) 65%,
+    var(--color-bg) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* === Background Video === */
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /*
+   * blur(60px)      — strong atmospheric gaussian blur
+   * contrast(0.845) — maps pure black (0,0,0) → ~rgb(20,20,20) = #141414,
+   *                   seamlessly matching the page background
+   */
+  filter: blur(76px) contrast(0.845);
+  /* Scale up to hide blur edge artifacts */
+  transform: scale(1.12);
+  pointer-events: none;
+}
+
+/* === DUOTONE (commented out — remove comment to re-enable) ===
+.hero-video {
+  filter: blur(60px) contrast(0.845) grayscale(1);
+}
+.hero-duotone-shadow {
+  position: absolute;
+  inset: 0;
+  background: var(--color-blue);
+  mix-blend-mode: saturation;
+  opacity: 0.7;
+  z-index: 1;
+  pointer-events: none;
+}
+.hero-duotone-highlight {
+  position: absolute;
+  inset: 0;
+  background: var(--color-accent);
+  mix-blend-mode: multiply;
+  z-index: 1;
+  pointer-events: none;
+}
+=== END DUOTONE === */
+
+/* === Hero Center Logo ===
+ * position: fixed + body-level DOM placement so mix-blend-mode
+ * blends against the root stacking context (video, grid images, etc.)
+ * will-change intentionally removed — it promotes to a GPU compositing
+ * layer before blending, which breaks mix-blend-mode in some browsers.
+ * ====================================================================== */
+.hero-logo-wrap {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* JS updates transform: translate(-50%,-50%) scale(N) */
+  transform: translate(-50%, -50%);
+  z-index: 150;
+  pointer-events: none;
+  mix-blend-mode: lighten;
+}
+
+.hero-logo-img {
+  display: block;
+  width: clamp(220px, 32vw, 480px);
+  height: auto;
+  /* No white filter — SVG native fill is rgb(242,128,170) = #F280AA pink */
+}
+
+/* === Scroll Nav (fixed, slides in from top) === */
+.scroll-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  height: var(--header-height, 64px);
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 0 20px;
+  mix-blend-mode: lighten;
+  /* Hidden by default — opacity only so mix-blend-mode works once visible */
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+
+.scroll-nav.is-visible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* === Scroll Nav — Left (Instagram) === */
+.scroll-nav__left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.scroll-nav__ig {
+  display: flex;
+  align-items: center;
+  color: #B3B1A2;
+  transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-nav__ig:hover {
+  color: var(--color-text);
+}
+
+/* === Scroll Nav — Center (Logo) ===
+ * Native pink SVG + mix-blend-mode: difference — same interaction
+ * behaviour as the hero logo: pink on dark, inverts on lighter content.
+ * ====================================================================== */
+.scroll-nav__center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-nav__logo {
+  display: flex;
+  align-items: center;
+}
+
+.scroll-nav__logo img {
+  height: 26px;
+  width: auto;
+  display: block;
+  /* Native SVG pink — no white override filter */
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-nav__logo:hover img {
+  opacity: 0.7;
+}
+
+/* === Scroll Nav — Right (Burger) === */
+.scroll-nav__right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.scroll-nav__burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5.5px;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: inherit;
+  border-radius: 4px;
+}
+
+.scroll-nav__burger:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.burger-line {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 1px;
+  transform-origin: center;
+  transition:
+    transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    background 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Open state: top + bottom rotate to X, middle fades */
+.scroll-nav__burger.is-open .burger-line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+  background: var(--color-accent);
+}
+
+.scroll-nav__burger.is-open .burger-line:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.scroll-nav__burger.is-open .burger-line:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+  background: var(--color-accent);
+}
+
+/* === Responsive — Tablet === */
+@media (max-width: 1024px) {
+  .scroll-nav {
+    padding: 0 16px;
+  }
+}
+
+/* === Responsive — Mobile === */
+@media (max-width: 768px) {
+  .scroll-nav {
+    padding: 0 12px;
+  }
+
+  .hero-logo-img {
+    width: clamp(140px, 48vw, 260px);
+  }
+}
+
+/* === Hero Scroll CTA === */
+.hero-scroll {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  pointer-events: none;
+}
+
+.hero-scroll__label {
+  font-family: var(--font-heading);
+  font-size: 0.625rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.hero-scroll__line {
+  position: relative;
+  width: 1px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.hero-scroll__line::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: var(--color-accent);
+  animation: heroScrollDot 1.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes heroScrollDot {
+  0%   { top: 100%; }
+  100% { top: -100%; }
+}
