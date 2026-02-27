@@ -284,7 +284,7 @@
   }
 
   .about-headline {
-    font-size: clamp(2rem, 10vw, 44px);
+    font-size: clamp(2rem, 8vw, 40px);
   }
 
   .about-content {
