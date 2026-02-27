@@ -283,6 +283,10 @@
     padding: 80px var(--padding-mobile) 48px;
   }
 
+  .about-headline {
+    font-size: 9vw;
+  }
+
   .about-content {
     padding: 0 var(--padding-mobile) 64px;
   }
