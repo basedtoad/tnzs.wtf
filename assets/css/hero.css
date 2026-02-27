@@ -125,8 +125,10 @@
 
 /* === Scroll Nav — Left (Logo) === */
 .scroll-nav__left {
+  flex: 1;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
 }
 
 .scroll-nav__logo {
@@ -149,6 +151,7 @@
 
 /* === Scroll Nav — Right (Burger) === */
 .scroll-nav__right {
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: flex-end;
