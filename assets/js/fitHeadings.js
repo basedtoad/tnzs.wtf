@@ -10,7 +10,7 @@
   'use strict';
 
   var BP = 768;
-  var HEADING_SELECTORS = '.about-headline, .hero-headline, .project-title';
+  var HEADING_SELECTORS = '.hero-headline, .project-title';
   var LINK_SELECTORS    = '.drawer-link';
 
   function isMobile() { return window.innerWidth <= BP; }
