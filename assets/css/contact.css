@@ -38,11 +38,12 @@
 
 .hero-headline {
   font-family: var(--font-heading);
-  font-size: clamp(52px, 8.5vw, 116px);
+  font-size: clamp(40px, 8.5vw, 116px);
   font-weight: 400;
   line-height: 1.0;
   letter-spacing: -0.025em;
   color: var(--color-text);
+  overflow-wrap: break-word;
   opacity: 0;
   animation: slideUp 0.65s var(--ease) 0.15s forwards;
 }
@@ -424,7 +425,7 @@
 /* === Responsive — Mobile === */
 @media (max-width: 768px) {
   .contact-hero {
-    padding: 56px var(--padding-mobile) 40px;
+    padding: 80px var(--padding-mobile) 40px;
   }
 
   .contact-section {
