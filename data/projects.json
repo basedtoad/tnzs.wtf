@@ -104,7 +104,7 @@
       "order": 3
     },
     "grid_item": {
-      "thumbnail": "/assets/images/projects/chiaApp/gridChiaApp6.png",
+      "thumbnail": "/assets/images/projects/chiaApp/chiaApp6.png",
       "thumbnail_alt": "Chia app interface screens",
       "item_size": "medium",
       "hover_caption": "View Project"
@@ -182,7 +182,7 @@
             "layout": "full"
           },
           {
-            "src": "/assets/images/projects/chiaApp/gridChiaApp6.png",
+            "src": "/assets/images/projects/chiaApp/chiaApp6.png",
             "alt": "Chia app screen",
             "caption": null,
             "layout": "half"
@@ -206,7 +206,7 @@
             "layout": "half"
           },
           {
-            "src": "/assets/images/projects/chiaApp/chiaApp10.png",
+            "src": "/assets/images/projects/chiaApp/gridChiaApp10.png",
             "alt": "Chia app screen",
             "caption": null,
             "layout": "half"
@@ -765,7 +765,7 @@
       "order": 8
     },
     "grid_item": {
-      "thumbnail": "/assets/images/projects/elZanate/gridHeroZanateeIllustWhite.webp",
+      "thumbnail": "/assets/images/projects/elZanate/gridHeroZanateeIllustWhite.png",
       "thumbnail_alt": "El Zanate — pixel cut illustration",
       "item_size": "medium",
       "hover_caption": "View Project"
@@ -780,7 +780,7 @@
         "custom_css": null
       },
       "hero": {
-        "hero_image": "/assets/images/projects/elZanate/gridHeroZanateeIllustWhite.webp",
+        "hero_image": "/assets/images/projects/elZanate/gridHeroZanateeIllustWhite.png",
         "hero_alt": "El Zanate — pixel cut illustration",
         "layout": "full-bleed"
       },
@@ -803,14 +803,8 @@
       "gallery": {
         "images": [
           {
-            "src": "/assets/images/projects/elZanate/gridHeroZanateeIllustWhite.webp",
+            "src": "/assets/images/projects/elZanate/gridHeroZanateeIllustWhite.png",
             "alt": "El Zanate — pixel cut illustration",
-            "caption": null,
-            "layout": "full"
-          },
-          {
-            "src": "/assets/images/projects/elZanate/hoodieMockupBackZanateeSmol.png",
-            "alt": "El Zanate hoodie mockup",
             "caption": null,
             "layout": "full"
           },
