@@ -813,6 +813,24 @@
             "alt": "El Zanate hoodie mockup",
             "caption": null,
             "layout": "full"
+          },
+          {
+            "src": "/assets/images/projects/elZanate/zanateHoodie.webp",
+            "alt": "El Zanate hoodie",
+            "caption": null,
+            "layout": "full"
+          },
+          {
+            "src": "/assets/images/projects/elZanate/zanatePrint.webp",
+            "alt": "El Zanate print",
+            "caption": null,
+            "layout": "full"
+          },
+          {
+            "src": "/assets/images/projects/elZanate/zanateWhiteShirt.webp",
+            "alt": "El Zanate white shirt",
+            "caption": null,
+            "layout": "full"
           }
         ]
       },
