@@ -48,7 +48,9 @@
         ' aria-label="View ' + escapeAttr(meta.title) + '">' +
         '<div class="item-image-wrapper">' +
           (item.thumbnail_video
-            ? '<video src="' + escapeAttr(item.thumbnail_video) + '" autoplay muted loop playsinline></video>'
+            ? '<video src="' + escapeAttr(item.thumbnail_video) + '" autoplay muted loop playsinline' +
+              (item.thumbnail_video_clip_end ? ' data-clip-end="' + (+item.thumbnail_video_clip_end) + '"' : '') +
+              '></video>'
             : '<img' +
                 ' src="' + escapeAttr(item.thumbnail) + '"' +
                 ' alt="' + escapeAttr(item.thumbnail_alt) + '"' +
@@ -62,6 +64,17 @@
       '</a>';
 
     grid.appendChild(el);
+
+    /* Clip video to N seconds if specified */
+    if (item.thumbnail_video_clip_end) {
+      var vid = el.querySelector('video[data-clip-end]');
+      if (vid) {
+        var end = +item.thumbnail_video_clip_end;
+        vid.addEventListener('timeupdate', function () {
+          if (vid.currentTime >= end) vid.currentTime = 0;
+        });
+      }
+    }
   });
 
   /* --- Helpers --- */

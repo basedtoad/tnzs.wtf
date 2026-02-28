@@ -68,6 +68,15 @@
   /* Fit project title to viewport width on mobile */
   if (window.fitHeadingsMobile) window.fitHeadingsMobile();
 
+  /* Clip videos that have data-clip-end (loop within 0→N seconds) */
+  contentEl.querySelectorAll('video[data-clip-end]').forEach(function (vid) {
+    var end = parseFloat(vid.getAttribute('data-clip-end'));
+    if (!end) return;
+    vid.addEventListener('timeupdate', function () {
+      if (vid.currentTime >= end) vid.currentTime = 0;
+    });
+  });
+
   /* --- Apply current language to translated content fields --- */
   function applyContentLang(lang) {
     contentEl.querySelectorAll('[data-en][data-es]').forEach(function (el) {
@@ -125,9 +134,10 @@
     const cls = 'project-hero project-hero--' + (hero.layout === 'contained' ? 'contained' : 'full-bleed') + blurCls;
     if (hero.hero_video) {
       var blendStyle = hero.blend_mode ? ' style="mix-blend-mode:' + escAttr(hero.blend_mode) + '"' : '';
+      var clipAttr   = hero.clip_end   ? ' data-clip-end="' + (+hero.clip_end) + '"' : '';
       return (
         '<div class="' + cls + '">' +
-          '<video autoplay muted loop playsinline' + blendStyle + '>' +
+          '<video autoplay muted loop playsinline' + blendStyle + clipAttr + '>' +
             '<source src="' + esc(hero.hero_video) + '" type="video/mp4">' +
           '</video>' +
         '</div>'
@@ -192,8 +202,9 @@
     let html = '<div class="project-gallery">';
     gallery.images.forEach(function (img) {
       var blendStyle = img.blend_mode ? ' style="mix-blend-mode:' + escAttr(img.blend_mode) + '"' : '';
+      var clipAttr   = img.clip_end   ? ' data-clip-end="' + (+img.clip_end) + '"' : '';
       const media = img.type === 'video'
-        ? '<video src="' + escAttr(img.src) + '" autoplay muted loop playsinline' + blendStyle + '></video>'
+        ? '<video src="' + escAttr(img.src) + '" autoplay muted loop playsinline' + blendStyle + clipAttr + '></video>'
         : '<img src="' + escAttr(img.src) + '" alt="' + escAttr(img.alt) + '" loading="lazy" decoding="async"' + blendStyle + '>';
       html +=
         '<div class="gallery-item">' +
