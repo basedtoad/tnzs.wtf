@@ -124,9 +124,10 @@
     const blurCls = hero.hero_blur ? ' project-hero--blurred' : '';
     const cls = 'project-hero project-hero--' + (hero.layout === 'contained' ? 'contained' : 'full-bleed') + blurCls;
     if (hero.hero_video) {
+      var blendStyle = hero.blend_mode ? ' style="mix-blend-mode:' + escAttr(hero.blend_mode) + '"' : '';
       return (
         '<div class="' + cls + '">' +
-          '<video autoplay muted loop playsinline>' +
+          '<video autoplay muted loop playsinline' + blendStyle + '>' +
             '<source src="' + esc(hero.hero_video) + '" type="video/mp4">' +
           '</video>' +
         '</div>'
@@ -190,9 +191,10 @@
 
     let html = '<div class="project-gallery">';
     gallery.images.forEach(function (img) {
+      var blendStyle = img.blend_mode ? ' style="mix-blend-mode:' + escAttr(img.blend_mode) + '"' : '';
       const media = img.type === 'video'
-        ? '<video src="' + escAttr(img.src) + '" autoplay muted loop playsinline></video>'
-        : '<img src="' + escAttr(img.src) + '" alt="' + escAttr(img.alt) + '" loading="lazy" decoding="async">';
+        ? '<video src="' + escAttr(img.src) + '" autoplay muted loop playsinline' + blendStyle + '></video>'
+        : '<img src="' + escAttr(img.src) + '" alt="' + escAttr(img.alt) + '" loading="lazy" decoding="async"' + blendStyle + '>';
       html +=
         '<div class="gallery-item">' +
           media +

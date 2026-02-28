@@ -853,7 +853,7 @@
     },
     "project_page": {
       "page_design": {
-        "background_color": "#0d0d0d",
+        "background_color": "#000000",
         "text_color": "#f0f0f0",
         "accent_color": "#F280AA",
         "heading_font": null,
@@ -864,7 +864,8 @@
         "hero_video": "/assets/videos/projects/encendedor/encendedor.mp4",
         "hero_image": null,
         "hero_alt": "Encendedor — rotoscopy animation of a lighter being turned on",
-        "layout": "full-bleed"
+        "layout": "full-bleed",
+        "blend_mode": "screen"
       },
       "content": {
         "brief": "Short rotoscopy animation of a lighter being turned on. Each frame hand-traced in Krita over reference footage.",
@@ -889,7 +890,8 @@
             "type": "video",
             "alt": "Encendedor — rotoscopy animation",
             "caption": null,
-            "layout": "full"
+            "layout": "full",
+            "blend_mode": "screen"
           }
         ]
       },
