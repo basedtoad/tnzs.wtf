@@ -846,7 +846,7 @@
     },
     "grid_item": {
       "thumbnail": "/assets/images/projects/encendedor/gridEncendedor.png",
-      "thumbnail_video": "/assets/videos/projects/encendedor/encendedor.mp4",
+      "thumbnail_video": null,
       "thumbnail_alt": "Encendedor — rotoscopy animation of a lighter",
       "item_size": "medium",
       "hover_caption": "View Project"
