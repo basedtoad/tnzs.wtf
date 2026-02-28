@@ -236,7 +236,7 @@
   margin-bottom: 20px;
   overflow: hidden;
   border-radius: 3px;
-  background-color: rgba(var(--project-text-rgb, 255, 255, 255), 0.04);
+  background-color: var(--project-bg, #141414);
 }
 
 .gallery-item img,
