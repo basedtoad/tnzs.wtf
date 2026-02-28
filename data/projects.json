@@ -124,8 +124,8 @@
         "layout": "full-bleed"
       },
       "content": {
-        "brief": "Replace this with your project description — the challenge, your approach, and the outcome. Keep it to two or three sentences.",
-        "brief_es": "Reemplaza esto con la descripción de tu proyecto — el reto, tu enfoque y el resultado. Dos o tres oraciones bastan.",
+        "brief": "App concept that aims to provide a social platform focused on food and recipes.",
+        "brief_es": "Concepto de app que busca ofrecer una plataforma social enfocada en comida y recetas.",
         "client": "Personal Project",
         "role": [
           "UI Designer",
