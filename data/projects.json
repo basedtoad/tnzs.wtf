@@ -364,6 +364,7 @@
     },
     "grid_item": {
       "thumbnail": "/assets/images/projects/v60Tutorial/gridV60Tutorial.jpg",
+      "thumbnail_video": "/assets/videos/v60Video.mp4",
       "thumbnail_alt": "V60 pour over coffee tutorial animation",
       "item_size": "medium",
       "hover_caption": "View Project"
@@ -404,6 +405,13 @@
       },
       "gallery": {
         "images": [
+          {
+            "src": "/assets/videos/v60Video.mp4",
+            "type": "video",
+            "alt": "V60 pour over coffee tutorial animation",
+            "caption": null,
+            "layout": "full"
+          },
           {
             "src": "/assets/images/projects/v60Tutorial/heroCupOfCoffee.jpg",
             "alt": "V60 tutorial animation still",
@@ -916,6 +924,83 @@
       },
       "navigation": {
         "prev_project": "project-016",
+        "next_project": "project-018"
+      }
+    }
+  },
+  {
+    "project_meta": {
+      "id": "project-018",
+      "slug": "pong",
+      "title": "Pong",
+      "subtitle": "Motion Graphics",
+      "subtitle_es": "Gráficas en Movimiento",
+      "category": "animation",
+      "tags": [
+        "animation",
+        "motion graphics",
+        "after effects"
+      ],
+      "year": 2023,
+      "status": "published",
+      "featured": false,
+      "order": 10
+    },
+    "grid_item": {
+      "thumbnail": "/assets/images/projects/pong/gridPong.png",
+      "thumbnail_video": "/assets/videos/pongAnim.mp4",
+      "thumbnail_alt": "Pong — motion graphics animation",
+      "item_size": "medium",
+      "hover_caption": "View Project"
+    },
+    "project_page": {
+      "page_design": {
+        "background_color": "#000000",
+        "text_color": "#f0f0f0",
+        "accent_color": "#F280AA",
+        "heading_font": null,
+        "body_font": null,
+        "custom_css": null
+      },
+      "hero": {
+        "hero_video": "/assets/videos/pongAnim.mp4",
+        "hero_image": null,
+        "hero_alt": "Pong — motion graphics animation",
+        "layout": "full-bleed"
+      },
+      "content": {
+        "brief": "Motion graphics animation made in After Effects simulating a game of Pong, with a comedic twist.",
+        "brief_es": "Animación de gráficas en movimiento hecha en After Effects que simula una partida de Pong, con un giro cómico.",
+        "client": "Personal Project",
+        "role": [
+          "Animator"
+        ],
+        "deliverables": [
+          "Motion graphics animation"
+        ],
+        "tools": [
+          "After Effects"
+        ],
+        "duration": null,
+        "project_url": null
+      },
+      "gallery": {
+        "images": [
+          {
+            "src": "/assets/videos/pongAnim.mp4",
+            "type": "video",
+            "alt": "Pong — motion graphics animation",
+            "caption": null,
+            "layout": "full"
+          }
+        ]
+      },
+      "process": {
+        "enabled": false,
+        "sections": []
+      },
+      "navigation": {
+        "prev_project": "project-017",
         "next_project": null
       }
     }
