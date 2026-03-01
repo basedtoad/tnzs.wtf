@@ -102,7 +102,7 @@
     -->
 
     <div class="hero-scroll" aria-label="Scroll down to see work">
-      <span class="hero-scroll__label" data-i18n="hero.scroll">Let's build something cute</span>
+      <span class="hero-scroll__label" aria-live="polite"><span data-i18n="cta.prefix">Let's build something </span><span class="cta-cycle-word">real</span></span>
       <span class="hero-scroll__line" aria-hidden="true"></span>
     </div>
   </section>
@@ -114,6 +114,22 @@
         <!-- Injected by grid.js -->
       </div>
     </div>
+    <!-- Home CTA -->
+    <section class="home-cta">
+      <div class="home-cta-inner">
+        <span class="home-cta-label" data-i18n="about.getInTouch">Get in touch</span>
+        <a href="/contact.html" class="home-cta-link">
+          <span><span data-i18n="cta.prefix">Let's build something </span><span class="cta-cycle-word">real</span></span>
+          <span class="home-cta-arrow" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <path d="M6 16H26M26 16L18 8M26 16L18 24"
+                    stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </section>
   </main>
 
   <!-- Footer -->
@@ -159,6 +175,7 @@
   <script src="/assets/js/fitHeadings.js"></script>
   <script src="/assets/js/heroScroll.js"></script>
   <script src="/assets/js/grid.js"></script>
+  <script src="/assets/js/cta-cycle.js"></script>
   <script src="/assets/js/favicon.js"></script>
 </body>
 </html>

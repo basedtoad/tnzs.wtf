@@ -387,6 +387,16 @@ body {
 
 
 
+/* === Cycling CTA Word === */
+.cta-cycle-word {
+  display: inline;
+  transition: opacity 0.25s var(--ease);
+}
+
+.cta-cycle-word.is-changing {
+  opacity: 0;
+}
+
 /* === Focus Indicators (Accessibility) === */
 :focus-visible {
   outline: 2px solid var(--color-accent);

@@ -13,7 +13,8 @@
       'nav.contact': 'Contact',
 
       /* Hero */
-      'hero.scroll': 'Let\'s build something cute',
+      'hero.scroll': 'Scroll to explore',
+      'cta.prefix':  'Let\'s build something ',
 
       /* About page */
       'about.eyebrow':              'About',
@@ -75,7 +76,8 @@
       'nav.contact': 'Contacto',
 
       /* Hero */
-      'hero.scroll': 'Hagamos algo lindo',
+      'hero.scroll': 'Despl\u00e1zate para explorar',
+      'cta.prefix':  'Hagamos algo ',
 
       /* About page */
       'about.eyebrow':              'Sobre m\u00ed',
