@@ -389,7 +389,8 @@ body {
 
 /* === Cycling CTA Word === */
 .cta-cycle-word {
-  display: inline;
+  display: inline-block;
+  white-space: nowrap;
   color: var(--color-accent);
   transition: opacity 0.25s var(--ease);
 }
@@ -400,7 +401,8 @@ body {
 
 /* === Bio Cycling Phrase === */
 .bio-cycle-word {
-  display: inline;
+  display: inline-block;
+  white-space: nowrap;
   color: var(--color-accent);
   transition: opacity 0.25s var(--ease);
 }
