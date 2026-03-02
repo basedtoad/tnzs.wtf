@@ -13,8 +13,9 @@
       'nav.contact': 'Contact',
 
       /* Hero */
-      'hero.scroll': 'Scroll to explore',
-      'cta.prefix':  'Let\'s build something ',
+      'hero.scroll':   'Scroll to explore',
+      'cta.prefix':    'Let\'s build something ',
+      'hero.tagline':  'A one man creative operation ready to build your next ',
 
       /* About page */
       'about.eyebrow':              'About',
@@ -76,8 +77,9 @@
       'nav.contact': 'Contacto',
 
       /* Hero */
-      'hero.scroll': 'Despl\u00e1zate para explorar',
-      'cta.prefix':  'Hagamos algo ',
+      'hero.scroll':   'Despl\u00e1zate para explorar',
+      'cta.prefix':    'Hagamos algo ',
+      'hero.tagline':  'Una operaci\u00f3n creativa de un solo tipo, lista para crear tu siguiente ',
 
       /* About page */
       'about.eyebrow':              'Sobre m\u00ed',

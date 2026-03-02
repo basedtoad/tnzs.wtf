@@ -99,13 +99,13 @@
 /* === Hero Tagline (below logo) === */
 .hero-tagline {
   font-family: var(--font-body);
-  font-size: 0.8125rem;
+  font-size: 0.9375rem;
   font-weight: 400;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.55);
   text-align: center;
-  white-space: nowrap;
-  line-height: 1;
+  line-height: 1.55;
+  max-width: min(560px, 80vw);
 }
 
 .hero-cycle-word {
@@ -246,6 +246,11 @@
 
   .hero-logo-img {
     width: clamp(140px, 48vw, 260px);
+  }
+
+  .hero-tagline {
+    font-size: 0.875rem;
+    max-width: 88vw;
   }
 }
 
