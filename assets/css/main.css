@@ -390,6 +390,7 @@ body {
 /* === Cycling CTA Word === */
 .cta-cycle-word {
   display: inline;
+  color: var(--color-accent);
   transition: opacity 0.25s var(--ease);
 }
 

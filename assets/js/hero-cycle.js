@@ -1,19 +1,18 @@
 /* ==========================================================================
-   cta-cycle.js — Cycling adjective for CTA elements
-   Finds all .cta-cycle-word spans and cycles through word lists.
-   Syncs with the active language from lang.js.
+   hero-cycle.js — Cycling noun for the hero tagline
+   Targets .hero-cycle-word spans with a separate word list from cta-cycle.js.
    ========================================================================== */
 
 (function () {
   'use strict';
 
   var WORDS = {
-    en: ['real', 'cool', 'fun', 'new', 'iconic', 'bold', 'memorable', 'unexpected'],
-    es: ['real', 'cool', 'divertido', 'nuevo', 'ic\u00f3nico', 'audaz', 'memorable', 'inesperado']
+    en: ['brand', 'illustration', 'animation', 'website', 'app'],
+    es: ['marca', 'ilustraci\u00f3n', 'animaci\u00f3n', 'sitio web', 'app']
   };
 
-  var INTERVAL  = 2500; /* ms between word changes  */
-  var FADE_OUT  = 250;  /* ms fade-out duration     */
+  var INTERVAL = 3000; /* ms between word changes */
+  var FADE_OUT = 250;  /* ms fade-out duration    */
 
   var idx        = 0;
   var intervalId = null;
@@ -29,7 +28,7 @@
   }
 
   function setWord(word) {
-    document.querySelectorAll('.cta-cycle-word').forEach(function (el) {
+    document.querySelectorAll('.hero-cycle-word').forEach(function (el) {
       el.textContent = word;
     });
   }
@@ -39,17 +38,14 @@
     idx = (idx + 1) % words.length;
     var next = words[idx];
 
-    var els = document.querySelectorAll('.cta-cycle-word');
+    var els = document.querySelectorAll('.hero-cycle-word');
     if (!els.length) return;
 
-    /* Fade out */
     els.forEach(function (el) { el.classList.add('is-changing'); });
 
     setTimeout(function () {
-      /* Swap text while invisible */
       els.forEach(function (el) { el.textContent = next; });
 
-      /* Double rAF: ensure browser paints the hidden state before fading in */
       requestAnimationFrame(function () {
         requestAnimationFrame(function () {
           els.forEach(function (el) { el.classList.remove('is-changing'); });
@@ -63,7 +59,6 @@
     intervalId = setInterval(update, INTERVAL);
   }
 
-  /* On language switch — keep the same slot, show word in new language */
   document.addEventListener('tnzs:lang-change', function () {
     var words = getWords();
     setWord(words[idx % words.length]);
