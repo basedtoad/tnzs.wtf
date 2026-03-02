@@ -9,7 +9,7 @@
 
   var WORDS = {
     en: ['real', 'cool', 'fun', 'new', 'iconic', 'bold', 'memorable', 'unexpected'],
-    es: ['real', 'cool', 'divertido', 'nuevo', 'ic\u00f3nico', 'audaz', 'memorable', 'inesperado']
+    es: ['real', 'cool', 'divertido', 'nuevo', 'iconico', 'audaz', 'memorable', 'inesperado']
   };
 
   var INTERVAL  = 2500; /* ms between word changes  */

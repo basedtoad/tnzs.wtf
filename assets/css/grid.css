@@ -191,4 +191,8 @@
   .home-cta-inner {
     padding-top: 48px;
   }
+
+  .home-cta-link {
+    font-size: clamp(1.25rem, 6.5vw, 2.5rem);
+  }
 }

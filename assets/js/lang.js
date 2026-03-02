@@ -15,7 +15,7 @@
       /* Hero */
       'hero.scroll':   'Scroll to explore',
       'cta.prefix':    'Let\'s build something ',
-      'hero.tagline':  'A one man creative operation ready to build your next ',
+      'hero.tagline':  'One person creative studio ready to build your next ',
 
       /* About page */
       'about.eyebrow':              'About',
@@ -73,13 +73,13 @@
     es: {
       /* Navigation */
       'nav.work':    'Trabajo',
-      'nav.about':   'Sobre m\u00ed',
+      'nav.about':   'Sobre mi',
       'nav.contact': 'Contacto',
 
       /* Hero */
       'hero.scroll':   'Despl\u00e1zate para explorar',
       'cta.prefix':    'Hagamos algo ',
-      'hero.tagline':  'Una operaci\u00f3n creativa de un solo tipo, lista para crear tu siguiente ',
+      'hero.tagline':  'Estudio creativo de una sola persona, listo para crear tu siguiente ',
 
       /* About page */
       'about.eyebrow':              'Sobre m\u00ed',

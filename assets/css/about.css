@@ -304,4 +304,8 @@
   .about-cta {
     padding: 48px 0 0;
   }
+
+  .about-cta-link {
+    font-size: clamp(1.25rem, 6.5vw, 2.5rem);
+  }
 }
