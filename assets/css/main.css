@@ -398,6 +398,17 @@ body {
   opacity: 0;
 }
 
+/* === Bio Cycling Phrase === */
+.bio-cycle-word {
+  display: inline;
+  color: var(--color-accent);
+  transition: opacity 0.25s var(--ease);
+}
+
+.bio-cycle-word.is-changing {
+  opacity: 0;
+}
+
 /* === Focus Indicators (Accessibility) === */
 :focus-visible {
   outline: 2px solid var(--color-accent);

@@ -19,7 +19,8 @@
 
       /* About page */
       'about.eyebrow':              'About',
-      'about.bio':                  'One guy creative operation ready to tackle your visual design needs.',
+      'about.tagline':              'One person creative studio ready to build your next ',
+      'about.bio.prefix':           'I\'m Carlos, the creator behind this operation. I do ',
       'about.whatIDo':              'What I do',
       'about.info':                 'Info',
       'about.basedIn.label':        'Based in',
@@ -83,7 +84,8 @@
 
       /* About page */
       'about.eyebrow':              'Sobre m\u00ed',
-      'about.bio':                  'Una operaci\u00f3n creativa de un solo tipo, lista para cubrir tus necesidades de dise\u00f1o visual.',
+      'about.tagline':              'Estudio creativo de una sola persona, listo para crear tu siguiente ',
+      'about.bio.prefix':           'Soy Carlos, el creador detr\u00e1s de esta operaci\u00f3n. Hago ',
       'about.whatIDo':              'Lo que hago',
       'about.info':                 'Info',
       'about.basedIn.label':        'Ubicaci\u00f3n',
