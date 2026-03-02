@@ -38,9 +38,9 @@
 
 .hero-headline {
   font-family: var(--font-heading);
-  font-size: clamp(40px, 8.5vw, 116px);
+  font-size: clamp(40px, 8.5vw, 96px);
   font-weight: 400;
-  line-height: 1.0;
+  line-height: 1.1;
   letter-spacing: -0.025em;
   color: var(--color-text);
   overflow-wrap: break-word;
@@ -52,6 +52,11 @@
   font-style: italic;
   font-weight: 300;
   color: var(--color-accent);
+}
+
+/* Keep "something real." on one line at desktop */
+.hero-headline [data-fit-group] {
+  white-space: nowrap;
 }
 
 .hero-rule {

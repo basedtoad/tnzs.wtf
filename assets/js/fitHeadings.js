@@ -53,7 +53,8 @@
         node.textContent.trim().split(/\s+/).forEach(function (w) {
           if (w) segs.push({ type: 'text', value: w });
         });
-      } else if (node.nodeName === 'EM' || node.nodeName === 'STRONG') {
+      } else if (node.nodeName === 'EM' || node.nodeName === 'STRONG' ||
+                 (node.nodeName === 'SPAN' && node.hasAttribute('data-fit-group'))) {
         segs.push({ type: 'element', node: node.cloneNode(true) });
       } else if (node.nodeName === 'SPAN') {
         node.textContent.trim().split(/\s+/).forEach(function (w) {
@@ -85,7 +86,7 @@
 
     fitSpans.forEach(function (s, i) {       // batch writes
       if (!widths[i]) return;
-      s.style.fontSize = Math.floor(maxW / widths[i] * 8 * 0.97) + 'px';
+      s.style.fontSize = Math.floor(maxW / widths[i] * 8 * 0.93) + 'px';
     });
   }
 
@@ -151,7 +152,7 @@
         link.style.fontSize = '8px';
         link.offsetWidth; // force reflow
         var w = getTextWidth(link);
-        if (w) link.style.fontSize = Math.floor(getMaxW() / w * 8 * 0.97) + 'px';
+        if (w) link.style.fontSize = Math.floor(getMaxW() / w * 8 * 0.93) + 'px';
       } else {
         /* Desktop: restore CSS defaults */
         link.removeAttribute('data-fit-done');
@@ -171,7 +172,7 @@
 
     link.offsetWidth; // force reflow
     var w = getTextWidth(link);
-    if (w) link.style.fontSize = Math.floor(getMaxW() / w * 8 * 0.97) + 'px';
+    if (w) link.style.fontSize = Math.floor(getMaxW() / w * 8 * 0.93) + 'px';
   }
 
   function runAll() {
@@ -187,16 +188,35 @@
   });
 
   /*
-   * Run after window.load + rAF so that:
-   *   1. All fonts (including Google Fonts with display:swap) are loaded
-   *   2. The browser has done its first layout pass
-   *   3. Range.getBoundingClientRect() returns real text widths
+   * Multi-strategy init for display:swap fonts (BBH Bartle via Google Fonts).
    *
-   * document.fonts.ready resolves as a microtask before the first paint and
-   * can fire before the swap font lands, giving wrong fallback-font widths.
+   * Pass 1 — window.load + rAF: fast first render. Correct when font is cached.
+   *   If not cached, fallback sans-serif is measured and words may be oversized.
+   *
+   * Pass 2 — document.fonts.load(): resolves when the actual BBH Bartle file
+   *   is downloaded. No weight specified so any variant triggers it.
+   *
+   * Pass 3 — loadingdone event: fires when the browser's font loading queue
+   *   drains. Belt-and-suspenders for browsers where fonts.load() behaves oddly.
+   *
+   * Pass 4 — 350 ms timeout: last-resort fallback for very slow connections
+   *   where the font may not be downloaded until well after window.load.
+   *
+   * All passes are cheap re-runs: processHeading/processLink see data-fit-done
+   * and call remeasureHeading/processLink which only resize existing spans.
    */
   window.addEventListener('load', function () {
     requestAnimationFrame(runAll);
+
+    document.fonts.load("1em 'BBH Bartle'").then(function () {
+      requestAnimationFrame(runAll);
+    });
+
+    document.fonts.addEventListener('loadingdone', function () {
+      requestAnimationFrame(runAll);
+    }, { once: true });
+
+    setTimeout(function () { requestAnimationFrame(runAll); }, 350);
   });
 
   /*
