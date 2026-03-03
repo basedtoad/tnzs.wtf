@@ -15,7 +15,7 @@
       /* Hero */
       'hero.scroll':   'Scroll to explore',
       'cta.prefix':    'Let\'s build something ',
-      'hero.tagline':  'Tiny studio ready to build your next ',
+      'hero.tagline':  'Creative studio ready to build your next ',
 
       /* About page */
       'about.eyebrow':              'About',
@@ -80,7 +80,7 @@
       /* Hero */
       'hero.scroll':   'Despl\u00e1zate para explorar',
       'cta.prefix':    'Hagamos algo ',
-      'hero.tagline':  'Peque\u00f1o estudio listo para crear tu siguiente ',
+      'hero.tagline':  'Estudio creativo listo para crear tu siguiente ',
 
       /* About page */
       'about.eyebrow':              'Sobre m\u00ed',

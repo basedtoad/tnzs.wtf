@@ -18,7 +18,7 @@
    * ----------------------------------------------------------------------- */
   var HERO_WORDS = {
     en: ['brand', 'illustration', 'animation', 'website', 'app'],
-    es: ['marca', 'ilustraci\u00f3n', 'animaci\u00f3n', 'sitio web', 'app']
+    es: ['marca', 'ilustracion', 'animacion', 'sitio web', 'app']
   };
 
   var BIO_WORDS = {

@@ -7,6 +7,7 @@
 
   const hero        = document.getElementById('hero');
   const logoWrap    = document.getElementById('heroLogoWrap');
+  const taglineEl   = document.getElementById('heroTagline');
   const scrollNav   = document.getElementById('scrollNav');
   const siteFooter  = document.querySelector('.site-footer');
   const burgerBtn   = document.getElementById('burgerBtn');
@@ -37,6 +38,7 @@
 
     logoWrap.style.transform = `translate(-50%, -50%) scale(${scale})`;
     logoWrap.style.opacity   = opacity;
+    if (taglineEl) taglineEl.style.opacity = opacity;
 
     /* Scroll nav + footer: appear at 50% of hero height */
     if (scrollY >= heroH * 0.5) {
