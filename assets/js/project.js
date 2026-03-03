@@ -221,13 +221,13 @@
     return (
       '<nav class="project-navigation" aria-label="Project navigation">' +
         (prev
-          ? '<a href="/project.html?p=' + escAttr(prev.project_meta.slug) + '" class="project-nav-link is-prev">' +
+          ? '<a href="/project?p=' + escAttr(prev.project_meta.slug) + '" class="project-nav-link is-prev">' +
               '<span class="project-nav-label">' + t('project.previous') + '</span>' +
               '<span class="project-nav-title">' + esc(prev.project_meta.title) + '</span>' +
             '</a>'
           : '<span></span>') +
         (next
-          ? '<a href="/project.html?p=' + escAttr(next.project_meta.slug) + '" class="project-nav-link is-next">' +
+          ? '<a href="/project?p=' + escAttr(next.project_meta.slug) + '" class="project-nav-link is-next">' +
               '<span class="project-nav-label">' + t('project.next') + '</span>' +
               '<span class="project-nav-title">' + esc(next.project_meta.title) + '</span>' +
             '</a>'

@@ -44,7 +44,7 @@
 
     el.innerHTML =
       '<a class="item-link"' +
-        ' href="/project.html?p=' + meta.slug + '"' +
+        ' href="/project?p=' + meta.slug + '"' +
         ' aria-label="View ' + escapeAttr(meta.title) + '">' +
         '<div class="item-image-wrapper">' +
           (item.thumbnail_video
