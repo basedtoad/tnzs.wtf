@@ -54,10 +54,6 @@
   color: var(--color-accent);
 }
 
-/* Keep "something real." on one line at desktop */
-.hero-headline [data-fit-group] {
-  white-space: nowrap;
-}
 
 .hero-rule {
   margin-top: 52px;
