@@ -49,6 +49,7 @@
         '<div class="item-image-wrapper">' +
           (item.thumbnail_video
             ? '<video src="' + escapeAttr(item.thumbnail_video) + '" autoplay muted loop playsinline' +
+              (item.thumbnail_video_clip_start ? ' data-clip-start="' + (+item.thumbnail_video_clip_start) + '"' : '') +
               (item.thumbnail_video_clip_end ? ' data-clip-end="' + (+item.thumbnail_video_clip_end) + '"' : '') +
               '></video>'
             : '<img' +
@@ -65,13 +66,18 @@
 
     grid.appendChild(el);
 
-    /* Clip video to N seconds if specified */
-    if (item.thumbnail_video_clip_end) {
-      var vid = el.querySelector('video[data-clip-end]');
+    /* Clip video to start/end range if specified */
+    if (item.thumbnail_video_clip_start || item.thumbnail_video_clip_end) {
+      var vid = el.querySelector('video');
       if (vid) {
-        var end = +item.thumbnail_video_clip_end;
+        var clipStart = item.thumbnail_video_clip_start ? +item.thumbnail_video_clip_start : 0;
+        var clipEnd   = item.thumbnail_video_clip_end   ? +item.thumbnail_video_clip_end   : null;
+        vid.addEventListener('loadedmetadata', function () {
+          vid.currentTime = clipStart;
+        });
         vid.addEventListener('timeupdate', function () {
-          if (vid.currentTime >= end) vid.currentTime = 0;
+          if (vid.currentTime < clipStart) vid.currentTime = clipStart;
+          if (clipEnd !== null && vid.currentTime >= clipEnd) vid.currentTime = clipStart;
         });
       }
     }

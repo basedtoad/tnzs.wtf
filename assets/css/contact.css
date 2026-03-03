@@ -388,6 +388,25 @@
   text-decoration-color: var(--color-accent);
 }
 
+.success-pong {
+  display: block;
+  margin-top: 20px;
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.28);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-color: transparent;
+  transition: color 0.2s var(--ease), text-decoration-color 0.2s var(--ease);
+  opacity: 0;
+  animation: slideUp 0.5s var(--ease) 0.55s forwards;
+}
+
+.success-pong:hover {
+  color: rgba(255, 255, 255, 0.55);
+  text-decoration-color: rgba(255, 255, 255, 0.2);
+}
+
 /* === Animations === */
 @keyframes slideUp {
   from {

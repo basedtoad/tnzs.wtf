@@ -365,6 +365,7 @@
     "grid_item": {
       "thumbnail": "/assets/images/projects/v60Tutorial/gridV60Tutorial.jpg",
       "thumbnail_video": "/assets/videos/v60Video.mp4",
+      "thumbnail_video_clip_start": 64,
       "thumbnail_alt": "V60 pour over coffee tutorial animation",
       "item_size": "medium",
       "hover_caption": "View Project"
@@ -949,6 +950,8 @@
     "grid_item": {
       "thumbnail": "/assets/images/projects/pong/gridPong.png",
       "thumbnail_video": "/assets/videos/pongAnim.mp4",
+      "thumbnail_video_clip_start": 3,
+      "thumbnail_video_clip_end": 17,
       "thumbnail_alt": "Pong — motion graphics animation",
       "item_size": "medium",
       "hover_caption": "View Project"

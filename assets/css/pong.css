@@ -1,0 +1,71 @@
+/* ==========================================================================
+   pong.css — Pong easter-egg game page
+   ========================================================================== */
+
+.pong-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: calc(var(--header-height, 64px) + 32px) var(--padding-mobile) 80px;
+  box-sizing: border-box;
+}
+
+.pong-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 800px;
+}
+
+#pong-canvas {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.06),
+    0 8px 40px rgba(0, 0, 0, 0.55),
+    0 0 100px rgba(242, 128, 170, 0.07);
+}
+
+/* === Touch controls — only shown on touch devices === */
+.pong-touch-controls {
+  display: none;
+  gap: 12px;
+  width: 100%;
+  max-width: 320px;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .pong-touch-controls {
+    display: flex;
+  }
+}
+
+.pong-touch-btn {
+  flex: 1;
+  height: 68px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.375rem;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background 0.15s var(--ease, cubic-bezier(0.4, 0, 0.2, 1)),
+    border-color 0.15s var(--ease, cubic-bezier(0.4, 0, 0.2, 1));
+}
+
+.pong-touch-btn:active {
+  background: rgba(242, 128, 170, 0.14);
+  border-color: rgba(242, 128, 170, 0.38);
+}

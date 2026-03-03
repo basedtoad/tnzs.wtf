@@ -262,6 +262,7 @@
   .hero-tagline {
     font-size: 0.875rem;
     max-width: 88vw;
+    white-space: normal;
   }
 }
 
