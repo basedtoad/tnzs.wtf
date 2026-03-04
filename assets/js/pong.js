@@ -37,10 +37,10 @@
   const PADDLE_H   = 80;
   const PADDLE_SPD = 7;
   const BALL_R     = 7;
-  const SPEED_INIT = 7;
+  const SPEED_INIT = 3.5;
   const SPEED_MAX  = 15;
   const SPEED_INC  = 0.35;
-  const AI_SPEED   = 5.0;
+  const AI_SPEED   = 3.5;
   const WIN_SCORE  = 7;
 
   /* --- State --- */
