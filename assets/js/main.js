@@ -40,6 +40,19 @@
     }, 380);
   });
 
+  /* --- Color Toggle --- */
+  if (localStorage.getItem('tnzs-blue') === '1') {
+    document.body.classList.add('is-blue');
+  }
+
+  var colorToggle = document.getElementById('colorToggle');
+  if (colorToggle) {
+    colorToggle.addEventListener('click', function () {
+      var isBlue = document.body.classList.toggle('is-blue');
+      localStorage.setItem('tnzs-blue', isBlue ? '1' : '0');
+    });
+  }
+
   /* --- Burger / Nav Drawer --- */
   var burgerBtn = document.getElementById('burgerBtn');
   var navDrawer = document.getElementById('navDrawer');

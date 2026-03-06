@@ -37,6 +37,8 @@
   padding: 0;
 }
 
+[hidden] { display: none !important; }
+
 html {
   font-size: 16px;
   scroll-behavior: smooth;
@@ -45,6 +47,9 @@ html {
 
 body {
   background-color: var(--color-bg);
+  background-image: url('/assets/images/paper.avif');
+  background-repeat: repeat;
+  background-blend-mode: multiply;
   color: var(--color-text);
   font-family: var(--font-body);
   font-weight: var(--weight-body);
@@ -53,6 +58,11 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* === Blue Mode === */
+body.is-blue {
+  --color-bg: var(--color-blue);
 }
 
 img {
@@ -167,7 +177,6 @@ ul, ol {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  mix-blend-mode: lighten;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -247,6 +256,37 @@ body {
 
 .footer-icon:hover {
   color: var(--color-text);
+}
+
+/* === Color Toggle Button === */
+.color-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--color-blue);
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  padding: 0;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.25s var(--ease), border-color 0.25s var(--ease), transform 0.25s var(--ease);
+}
+
+.color-toggle:hover {
+  border-color: rgba(255, 255, 255, 0.55);
+  transform: scale(1.2);
+}
+
+.color-toggle:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+body.is-blue .color-toggle {
+  background: #141414;
+  border-color: rgba(255, 255, 255, 0.35);
 }
 
 /* === Drawer language button === */
