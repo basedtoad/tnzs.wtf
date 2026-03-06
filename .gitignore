@@ -13,6 +13,7 @@ serve.json
 
 # Claude internal
 .claude/
+CLAUDE.md
 
 # OS
 .DS_Store
