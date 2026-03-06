@@ -16,6 +16,19 @@
 }
 
 /*
+ * Bottom gradient — fades #141414 at the bottom up to transparent at 50%,
+ * blending the hero into the page content below.
+ */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, #141414 0%, transparent 50%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/*
  * Vignette — radial gradient that fades the blurred video edges smoothly
  * into the page background, replacing the hard blur-edge artifact with a
  * soft atmospheric dissolve.
