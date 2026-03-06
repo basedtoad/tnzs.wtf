@@ -69,6 +69,15 @@
       /* Grid */
       'grid.error': 'Could not load projects.',
       'grid.empty': 'No projects yet.',
+
+      /* Pong */
+      'pong.title':  'PONG',
+      'pong.play':   'Press Space or tap to play',
+      'pong.paused': 'PAUSED',
+      'pong.resume': 'Press Space or tap to resume',
+      'pong.win':    'YOU WIN',
+      'pong.lose':   'YOU LOSE',
+      'pong.again':  'Press Space or tap to play again',
     },
 
     es: {
@@ -134,6 +143,15 @@
       /* Grid */
       'grid.error': 'No se pudieron cargar los proyectos.',
       'grid.empty': 'Sin proyectos a\u00fan.',
+
+      /* Pong */
+      'pong.title':  'PONG',
+      'pong.play':   'Presiona Espacio o toca para jugar',
+      'pong.paused': 'PAUSA',
+      'pong.resume': 'Presiona Espacio o toca para continuar',
+      'pong.win':    'GANASTE',
+      'pong.lose':   'PERDISTE',
+      'pong.again':  'Presiona Espacio o toca para jugar de nuevo',
     }
   };
 

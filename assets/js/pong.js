@@ -18,8 +18,8 @@
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
 
-  const W = 800;
-  const H = 500;
+  const W = 1200;
+  const H = 750;
   canvas.width  = W;
   canvas.height = H;
 
@@ -32,16 +32,17 @@
   const FONT_BODY    = '"Outfit", sans-serif';
 
   /* --- Constants --- */
-  const GOAL_X     = 40;    // goal line x from each edge (smaller = closer to edge)
-  const PADDLE_W   = 10;
-  const PADDLE_H   = 80;
+  const GOAL_X     = 100;   // goal line x from each edge (smaller = closer to edge)
+  const PADDLE_W   = 12;
+  const PADDLE_H   = 100;
   const PADDLE_SPD = 7;
-  const BALL_R     = 7;
+  const BALL_R     = 9;
   const SPEED_INIT = 3.5;
   const SPEED_MAX  = 15;
   const SPEED_INC  = 0.35;
   const AI_SPEED   = 3.5;
   const WIN_SCORE  = 7;
+  const GOAL_H     = 250; // goal mouth height
 
   /* --- State --- */
   let gameState = 'idle';
@@ -160,7 +161,7 @@
     /* Right canvas wall bounce (back of right goal) */
     if (ball.x + BALL_R >= W) { ball.x = W - BALL_R; ball.dx = -Math.abs(ball.dx); }
 
-    /* Left paddle (player) — only intercepts ball heading left */
+    /* Left paddle (player) — front face (ball heading left from field) */
     var px = GOAL_X;
     if (
       ball.dx < 0 &&
@@ -177,7 +178,23 @@
       ball.dy    =  ball.speed * Math.sin(angle);
     }
 
-    /* Right paddle (AI) — only intercepts ball heading right */
+    /* Left paddle (player) — back face (ball heading right from goal area) */
+    if (
+      ball.dx > 0 &&
+      ball.x <= px &&
+      ball.x + BALL_R >= px &&
+      ball.y + BALL_R >= player.y &&
+      ball.y - BALL_R <= player.y + PADDLE_H
+    ) {
+      ball.x = px - BALL_R;
+      var relHitBk = (ball.y - (player.y + PADDLE_H / 2)) / (PADDLE_H / 2);
+      var angleBk  = relHitBk * (Math.PI / 3);
+      ball.speed = Math.min(SPEED_MAX, ball.speed + SPEED_INC);
+      ball.dx    = -ball.speed * Math.cos(angleBk);
+      ball.dy    =  ball.speed * Math.sin(angleBk);
+    }
+
+    /* Right paddle (AI) — front face (ball heading right from field) */
     var ax = W - GOAL_X - PADDLE_W;
     if (
       ball.dx > 0 &&
@@ -194,19 +211,37 @@
       ball.dy     =  ball.speed * Math.sin(angle2);
     }
 
+    /* Right paddle (AI) — back face (ball heading left from goal area) */
+    if (
+      ball.dx < 0 &&
+      ball.x >= ax + PADDLE_W &&
+      ball.x - BALL_R <= ax + PADDLE_W &&
+      ball.y + BALL_R >= ai.y &&
+      ball.y - BALL_R <= ai.y + PADDLE_H
+    ) {
+      ball.x = ax + PADDLE_W + BALL_R;
+      var relHit2Bk = (ball.y - (ai.y + PADDLE_H / 2)) / (PADDLE_H / 2);
+      var angle2Bk  = relHit2Bk * (Math.PI / 3);
+      ball.speed = Math.min(SPEED_MAX, ball.speed + SPEED_INC);
+      ball.dx    =  ball.speed * Math.cos(angle2Bk);
+      ball.dy    =  ball.speed * Math.sin(angle2Bk);
+    }
+
     /*
-     * Scoring — goal line crossing detection.
-     * Score is awarded when the ball EXITS the goal area back into the field:
-     *   prevX was in goal area  →  ball.x is now in field  =  point
-     * This also covers "back of the post": ball bounced off the canvas wall
-     * and crossed the goal line coming back — still counts.
+     * Scoring — ball must ENTER the goal area through the short goal mouth.
+     * If it enters outside the mouth Y-range it bounces off the back wall and
+     * returns to play with no score.
      */
-    if (prevX < GOAL_X && ball.x >= GOAL_X) {
+    var goalTop = H / 2 - GOAL_H / 2;
+    var goalBot = H / 2 + GOAL_H / 2;
+    var inMouth = ball.y + BALL_R >= goalTop && ball.y - BALL_R <= goalBot;
+
+    if (prevX >= GOAL_X && ball.x < GOAL_X && inMouth) {
       score.ai++;
       ball = makeBall();
       if (score.ai >= WIN_SCORE) gameState = 'gameover';
     }
-    if (prevX > W - GOAL_X && ball.x <= W - GOAL_X) {
+    if (prevX <= W - GOAL_X && ball.x > W - GOAL_X && inMouth) {
       score.p++;
       ball = makeBall();
       if (score.p >= WIN_SCORE) gameState = 'gameover';
@@ -219,49 +254,48 @@
     ctx.fillStyle = COLOR_BG;
     ctx.fillRect(0, 0, W, H);
 
-    /* Goal lines — solid white verticals */
+    /* Goal lines — short segments at goal mouth */
+    var goalTop = H / 2 - GOAL_H / 2;
+    var goalBot = H / 2 + GOAL_H / 2;
     ctx.strokeStyle = 'rgba(255,255,255,0.3)';
     ctx.lineWidth   = 4;
     ctx.setLineDash([]);
-    ctx.beginPath(); ctx.moveTo(GOAL_X, 0);     ctx.lineTo(GOAL_X, H);     ctx.stroke();
-    ctx.beginPath(); ctx.moveTo(W - GOAL_X, 0); ctx.lineTo(W - GOAL_X, H); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(GOAL_X,     goalTop); ctx.lineTo(GOAL_X,     goalBot); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(W - GOAL_X, goalTop); ctx.lineTo(W - GOAL_X, goalBot); ctx.stroke();
 
-    /* Center dividing line — white dashes, wider */
-    ctx.save();
-    ctx.setLineDash([10, 14]);
+    /* Center dividing line */
     ctx.strokeStyle = 'rgba(255,255,255,0.3)';
-    ctx.lineWidth   = 4;
+    ctx.lineWidth   = 8;
+    ctx.setLineDash([]);
     ctx.beginPath();
     ctx.moveTo(W / 2, 0);
     ctx.lineTo(W / 2, H);
     ctx.stroke();
-    ctx.restore();
 
-    /* Scores — tinted to match paddle colors */
+    /* Scores */
     ctx.font         = '600 60px ' + FONT_HEADING;
     ctx.textAlign    = 'center';
     ctx.textBaseline = 'top';
     ctx.fillStyle    = 'rgba(242,128,170,0.2)';
     ctx.fillText(score.p, W / 2 - 72, 18);
-    ctx.fillStyle    = 'rgba(77,166,255,0.2)';
     ctx.fillText(score.ai, W / 2 + 72, 18);
 
     /* Paddles */
     ctx.fillStyle = COLOR_PINK;
-    fillRoundRect(GOAL_X, player.y, PADDLE_W, PADDLE_H, 4);
-    ctx.fillStyle = COLOR_BLUE;
-    fillRoundRect(W - GOAL_X - PADDLE_W, ai.y, PADDLE_W, PADDLE_H, 4);
+    ctx.fillRect(GOAL_X, player.y, PADDLE_W, PADDLE_H);
+    ctx.fillRect(W - GOAL_X - PADDLE_W, ai.y, PADDLE_W, PADDLE_H);
 
     /* Ball — white, motion stretch, no glow */
     drawBall();
 
     /* State overlays */
+    var t = window.tnzsLang ? window.tnzsLang.t : function (k) { return k; };
     if (gameState === 'idle') {
-      drawOverlay('PONG', 'Press Space or tap to play');
+      drawOverlay(t('pong.title'), t('pong.play'));
     } else if (gameState === 'paused') {
-      drawOverlay('PAUSED', 'Press Space or tap to resume');
+      drawOverlay(t('pong.paused'), t('pong.resume'));
     } else if (gameState === 'gameover') {
-      drawOverlay(score.p >= WIN_SCORE ? 'YOU WIN' : 'YOU LOSE', 'Press Space or tap to play again');
+      drawOverlay(score.p >= WIN_SCORE ? t('pong.win') : t('pong.lose'), t('pong.again'));
     }
   }
 
