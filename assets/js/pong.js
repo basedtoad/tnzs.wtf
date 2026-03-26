@@ -53,7 +53,8 @@
 
   /* --- Input --- */
   const keys  = {};
-  const touch = { up: false, down: false };
+  const touch   = { up: false, down: false };
+  const gamepad = { up: false, down: false, interactPrev: false };
 
   document.addEventListener('keydown', function (e) {
     keys[e.key] = true;
@@ -131,11 +132,27 @@
 
   /* --- Update --- */
   function update() {
+    /* Gamepad input — runs every frame regardless of game state so start/pause work */
+    var _gps = navigator.getGamepads ? navigator.getGamepads() : [];
+    gamepad.up   = false;
+    gamepad.down = false;
+    for (var _gi = 0; _gi < _gps.length; _gi++) {
+      var _gp = _gps[_gi];
+      if (!_gp) continue;
+      var _ay = _gp.axes[1] || 0;
+      gamepad.up   = _ay < -0.3 || !!(_gp.buttons[12] && _gp.buttons[12].pressed);
+      gamepad.down = _ay >  0.3 || !!(_gp.buttons[13] && _gp.buttons[13].pressed);
+      var _gInt = !!(_gp.buttons[0] && _gp.buttons[0].pressed) || !!(_gp.buttons[9] && _gp.buttons[9].pressed);
+      if (_gInt && !gamepad.interactPrev) handleInteract();
+      gamepad.interactPrev = _gInt;
+      break;
+    }
+
     if (gameState !== 'playing') return;
 
     /* Player movement */
-    var goUp   = keys['w'] || keys['W'] || keys['ArrowUp']  || touch.up;
-    var goDown = keys['s'] || keys['S'] || keys['ArrowDown'] || touch.down;
+    var goUp   = keys['w'] || keys['W'] || keys['ArrowUp']  || touch.up   || gamepad.up;
+    var goDown = keys['s'] || keys['S'] || keys['ArrowDown'] || touch.down || gamepad.down;
     if (goUp)   player.y = Math.max(0,            player.y - PADDLE_SPD);
     if (goDown) player.y = Math.min(H - PADDLE_H, player.y + PADDLE_SPD);
 
