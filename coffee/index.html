@@ -13,7 +13,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=BBH+Bartle&family=Outfit:wght@100..900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Outfit:wght@100..900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 
   <!-- Styles -->
   <link rel="stylesheet" href="/assets/css/main.css">
@@ -89,17 +89,25 @@
       <div class="coffee-tool-grid" aria-hidden="true"></div>
       <div class="coffee-inner">
 
-        <!-- Step 1: Method -->
+        <!-- Step 1: Method — custom dropdown -->
         <div class="coffee-step">
           <span class="coffee-step-label" data-i18n="coffee.method">Brewing Method</span>
-          <div class="method-grid" role="group" aria-label="Brewing method">
-            <button class="method-btn is-active" data-method="v60">V60</button>
-            <button class="method-btn" data-method="cloth">Chorreado</button>
-            <button class="method-btn" data-method="frenchpress">French Press</button>
-            <button class="method-btn" data-method="aeropress">Aeropress</button>
-            <button class="method-btn" data-method="espresso">Espresso</button>
-            <button class="method-btn" data-method="mokapot">Moka Pot</button>
-            <button class="method-btn" data-method="coldbrew">Cold Brew</button>
+          <div class="cp-dropdown" id="methodDropdown" role="combobox" aria-haspopup="listbox" aria-expanded="false">
+            <button class="cp-dropdown-trigger" type="button" aria-label="Select brewing method">
+              <span class="cp-dropdown-selected" id="methodLabel">V60</span>
+              <svg class="cp-dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" aria-hidden="true" fill="none">
+                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </button>
+            <ul class="cp-dropdown-menu" role="listbox" aria-label="Brewing method">
+              <li class="cp-dropdown-item is-active" role="option" aria-selected="true"  data-method="v60">V60</li>
+              <li class="cp-dropdown-item"            role="option" aria-selected="false" data-method="cloth">Chorreado</li>
+              <li class="cp-dropdown-item"            role="option" aria-selected="false" data-method="frenchpress">French Press</li>
+              <li class="cp-dropdown-item"            role="option" aria-selected="false" data-method="aeropress">Aeropress</li>
+              <li class="cp-dropdown-item"            role="option" aria-selected="false" data-method="espresso">Espresso</li>
+              <li class="cp-dropdown-item"            role="option" aria-selected="false" data-method="mokapot">Moka Pot</li>
+              <li class="cp-dropdown-item"            role="option" aria-selected="false" data-method="coldbrew">Cold Brew</li>
+            </ul>
           </div>
         </div>
 
@@ -177,7 +185,7 @@
 
   </main>
 
-  <!-- Footer — cyberpunk rework -->
+  <!-- Footer — cyberpunk -->
   <footer class="cp-footer is-visible" role="contentinfo">
     <div class="cp-footer-left">
       <button class="cp-lang-btn" aria-label="Switch language">
@@ -187,7 +195,7 @@
       </button>
     </div>
     <div class="cp-footer-right">
-      <button class="cp-color-toggle" id="colorToggle" aria-label="Toggle blue mode"></button>
+      <button class="cp-color-toggle" id="colorToggle" aria-label="Toggle EVA-01 mode"></button>
       <a href="https://instagram.com/tnzs.wtf"
          class="cp-footer-icon"
          target="_blank"

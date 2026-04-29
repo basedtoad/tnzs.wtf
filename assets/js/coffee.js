@@ -55,35 +55,68 @@
     var method = getMethod(id);
     state.methodId = id;
     state.ratio    = method.ratio;
+    state.water    = method.water;
 
     var waterSlider = document.getElementById('waterSlider');
     var waterVal    = document.getElementById('waterValue');
     var ratioSlider = document.getElementById('ratioSlider');
     var ratioVal    = document.getElementById('ratioValue');
     var ratioRec    = document.getElementById('ratioRecommended');
-    state.water = method.water;
+    var methodLabel = document.getElementById('methodLabel');
+
     if (waterSlider) waterSlider.value = method.water;
     if (waterVal)    waterVal.textContent = method.water;
     if (ratioSlider) ratioSlider.value = method.ratio;
     if (ratioVal)    ratioVal.textContent = method.ratio;
     if (ratioRec)    ratioRec.textContent = '1 : ' + method.ratio;
 
-    document.querySelectorAll('.method-btn').forEach(function (btn) {
-      btn.classList.toggle('is-active', btn.dataset.method === id);
+    /* Update dropdown display */
+    document.querySelectorAll('.cp-dropdown-item').forEach(function (item) {
+      var active = item.dataset.method === id;
+      item.classList.toggle('is-active', active);
+      item.setAttribute('aria-selected', active ? 'true' : 'false');
+      if (active && methodLabel) methodLabel.textContent = item.textContent;
     });
 
     render();
   }
 
   document.addEventListener('DOMContentLoaded', function () {
-    /* Method buttons */
-    document.querySelectorAll('.method-btn').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        selectMethod(btn.dataset.method);
+
+    /* === Custom Dropdown === */
+    var dropdown        = document.getElementById('methodDropdown');
+    var dropdownTrigger = dropdown && dropdown.querySelector('.cp-dropdown-trigger');
+
+    function closeDropdown() {
+      if (!dropdown) return;
+      dropdown.classList.remove('is-open');
+      dropdown.setAttribute('aria-expanded', 'false');
+    }
+
+    if (dropdownTrigger) {
+      dropdownTrigger.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var isOpen = dropdown.classList.toggle('is-open');
+        dropdown.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+    }
+
+    document.querySelectorAll('.cp-dropdown-item').forEach(function (item) {
+      item.addEventListener('click', function () {
+        closeDropdown();
+        selectMethod(item.dataset.method);
       });
     });
 
-    /* Water slider */
+    /* Close on outside click or Escape */
+    document.addEventListener('click', function (e) {
+      if (dropdown && !dropdown.contains(e.target)) closeDropdown();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeDropdown();
+    });
+
+    /* === Water slider === */
     var waterSlider = document.getElementById('waterSlider');
     if (waterSlider) {
       waterSlider.addEventListener('input', function () {
@@ -94,7 +127,7 @@
       });
     }
 
-    /* Ratio slider */
+    /* === Ratio slider === */
     var ratioSlider = document.getElementById('ratioSlider');
     if (ratioSlider) {
       ratioSlider.addEventListener('input', function () {
