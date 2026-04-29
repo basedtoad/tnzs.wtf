@@ -40,17 +40,6 @@ body:has(.coffee-hero) {
   z-index: 0;
 }
 
-.coffee-hero-grid {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(242, 128, 170, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(242, 128, 170, 0.04) 1px, transparent 1px);
-  background-size: 48px 48px;
-  pointer-events: none;
-  z-index: 0;
-}
-
 .coffee-hero-glow {
   position: absolute;
   top: -80px;
@@ -87,8 +76,8 @@ body:has(.coffee-hero) {
 
 /* === Headline — Orbitron === */
 .coffee-headline {
-  font-family: 'Orbitron', sans-serif;
-  font-weight: 900;
+  font-family: 'Bruno Ace SC', sans-serif;
+  font-weight: 400;
   font-size: clamp(2rem, 6.5vw, 7rem);
   line-height: 1.08;
   letter-spacing: 0.04em;
@@ -140,16 +129,6 @@ body:has(.coffee-hero) {
   position: relative;
   padding: 0 var(--padding-desktop) 120px;
   background: #000;
-}
-
-.coffee-tool-grid {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.022) 1px, transparent 1px);
-  background-size: 40px 40px;
-  pointer-events: none;
 }
 
 .coffee-inner {
@@ -704,11 +683,11 @@ body.is-blue .cp-footer {
   --cp-amber: #EF7F02;
 }
 
-body.is-blue .coffee-hero  { background: #282828; }
-body.is-blue .coffee-tool  { background: #282828; }
-body.is-blue .cp-footer    { background: #282828; }
+body.is-blue .coffee-hero  { background: #000; }
+body.is-blue .coffee-tool  { background: #000; }
+body.is-blue .cp-footer    { background: #000; }
 
-body.is-blue:has(.coffee-hero) { background: #282828; }
+body.is-blue:has(.coffee-hero) { background: #000; }
 
 body.is-blue .coffee-hero-glow {
   background: radial-gradient(circle, rgba(116, 1, 182, 0.14) 0%, rgba(11, 238, 0, 0.05) 50%, transparent 70%);
@@ -722,13 +701,6 @@ body.is-blue .coffee-hero-scanlines {
     rgba(116, 1, 182, 0.025) 3px,
     rgba(116, 1, 182, 0.025) 4px
   );
-}
-
-body.is-blue .coffee-hero-grid,
-body.is-blue .coffee-tool-grid {
-  background-image:
-    linear-gradient(rgba(116, 1, 182, 0.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(116, 1, 182, 0.07) 1px, transparent 1px);
 }
 
 body.is-blue .coffee-headline {
