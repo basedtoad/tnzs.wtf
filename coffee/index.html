@@ -13,7 +13,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=BBH+Bartle&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=BBH+Bartle&family=Outfit:wght@100..900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 
   <!-- Styles -->
   <link rel="stylesheet" href="/assets/css/main.css">
@@ -25,7 +25,7 @@
   <!-- Page transition overlay -->
   <div class="page-transition" aria-hidden="true"></div>
 
-  <!-- Nav Drawer -->
+  <!-- Nav Drawer (unchanged) -->
   <div class="nav-drawer" id="navDrawer" role="dialog" aria-label="Site menu" aria-modal="true" aria-hidden="true">
     <nav class="drawer-nav" aria-label="Main navigation">
       <ul class="drawer-links">
@@ -47,7 +47,7 @@
     </div>
   </div>
 
-  <!-- Nav -->
+  <!-- Nav (unchanged) -->
   <nav class="scroll-nav is-visible" aria-label="Site navigation">
     <div class="scroll-nav__left">
       <a href="/" class="scroll-nav__logo" aria-label="tnzs — home">
@@ -71,16 +71,22 @@
 
     <!-- Hero -->
     <section class="coffee-hero">
+      <div class="coffee-hero-scanlines" aria-hidden="true"></div>
       <div class="coffee-hero-glow" aria-hidden="true"></div>
+      <div class="coffee-hero-grid" aria-hidden="true"></div>
       <div class="coffee-hero-inner">
         <p class="coffee-eyebrow" data-i18n="coffee.eyebrow">Brew Guide</p>
         <h1 class="coffee-headline" data-i18n="coffee.headline">Coffee Calculator</h1>
-        <div class="coffee-rule" aria-hidden="true"></div>
+        <div class="coffee-hero-sub" aria-hidden="true">
+          <span class="coffee-hero-bar"></span>
+          <span class="coffee-hero-sys">SYS://BREW_CALC v2.1</span>
+        </div>
       </div>
     </section>
 
     <!-- Tool -->
     <section class="coffee-tool">
+      <div class="coffee-tool-grid" aria-hidden="true"></div>
       <div class="coffee-inner">
 
         <!-- Step 1: Method -->
@@ -107,7 +113,7 @@
               <span class="ratio-value" id="waterValue">300</span>
               <span class="ratio-prefix">g</span>
             </div>
-            <input class="ratio-slider" id="waterSlider" type="range" min="50" max="2000" step="10" value="300" aria-label="Water amount in grams">
+            <input class="ratio-slider" id="waterSlider" type="range" min="50" max="5000" step="10" value="300" aria-label="Water amount in grams">
           </div>
 
           <!-- Step 3: Ratio -->
@@ -127,18 +133,19 @@
         </div>
 
         <!-- Result -->
-        <div class="coffee-result" id="coffeeResult" aria-live="polite">
+        <div class="coffee-result hud-panel" id="coffeeResult" aria-live="polite">
+          <div class="hud-corner" aria-hidden="true"></div>
 
           <div class="result-row result-row--main">
             <div class="result-stat">
               <span class="result-label" data-i18n="coffee.coffee">Coffee</span>
-              <span class="result-value" id="resultCoffee">31.3</span>
+              <span class="result-value result-value--pink" id="resultCoffee">18.8</span>
               <span class="result-unit">g</span>
             </div>
             <div class="result-divider" aria-hidden="true"></div>
-            <div class="result-stat">
+            <div class="result-stat result-stat--right">
               <span class="result-label" data-i18n="coffee.water">Water</span>
-              <span class="result-value" id="resultWater">500</span>
+              <span class="result-value result-value--cyan" id="resultWater">300</span>
               <span class="result-unit">g</span>
             </div>
           </div>
@@ -170,21 +177,23 @@
 
   </main>
 
-  <!-- Footer -->
-  <footer class="site-footer is-visible" role="contentinfo">
-    <button class="lang-btn" aria-label="Switch language">
-      <span data-lang="en">EN</span>
-      <span class="lang-sep"> | </span>
-      <span data-lang="es">ES</span>
-    </button>
-    <div class="footer-right">
-      <button class="color-toggle" id="colorToggle" aria-label="Toggle blue mode"></button>
+  <!-- Footer — cyberpunk rework -->
+  <footer class="cp-footer is-visible" role="contentinfo">
+    <div class="cp-footer-left">
+      <button class="cp-lang-btn" aria-label="Switch language">
+        <span data-lang="en">EN</span>
+        <span class="cp-lang-sep">/</span>
+        <span data-lang="es">ES</span>
+      </button>
+    </div>
+    <div class="cp-footer-right">
+      <button class="cp-color-toggle" id="colorToggle" aria-label="Toggle blue mode"></button>
       <a href="https://instagram.com/tnzs.wtf"
-         class="footer-icon"
+         class="cp-footer-icon"
          target="_blank"
          rel="noopener noreferrer"
          aria-label="Instagram">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
              stroke="currentColor" stroke-width="1.5"
              stroke-linecap="round" stroke-linejoin="round"
              aria-hidden="true">
@@ -194,15 +203,15 @@
         </svg>
       </a>
       <a href="https://wa.me/50688059882"
-         class="footer-icon"
+         class="cp-footer-icon"
          target="_blank"
          rel="noopener noreferrer"
          aria-label="WhatsApp">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
         </svg>
       </a>
-      <a href="/" class="footer-logo" aria-label="tnzs — home">
+      <a href="/" class="cp-footer-logo" aria-label="tnzs — home">
         <img src="/assets/logo.svg" alt="tnzs">
       </a>
     </div>
