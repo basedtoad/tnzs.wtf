@@ -1,0 +1,430 @@
+/* ==========================================================================
+   coffee.css — Coffee brewing calculator page
+   ========================================================================== */
+
+/* === Hero === */
+.coffee-hero {
+  position: relative;
+  padding: 120px var(--padding-desktop) 32px;
+  overflow: hidden;
+}
+
+.coffee-hero-glow {
+  position: absolute;
+  top: -60px;
+  right: -120px;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(139, 90, 43, 0.06) 0%, rgba(242, 128, 170, 0.04) 40%, transparent 70%);
+  pointer-events: none;
+}
+
+.coffee-hero-inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.coffee-eyebrow {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 28px;
+  opacity: 0;
+  animation: slideUp 0.55s var(--ease) 0.05s forwards;
+}
+
+.coffee-headline {
+  font-family: var(--font-heading);
+  font-size: clamp(44px, 6.5vw, 88px);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: var(--color-text);
+  margin: 0;
+  opacity: 0;
+  animation: slideUp 0.65s var(--ease) 0.15s forwards;
+}
+
+.coffee-rule {
+  margin-top: 52px;
+  width: 0;
+  height: 1px;
+  background: linear-gradient(90deg, var(--color-accent), transparent);
+  animation: expandRule 0.8s var(--ease) 0.5s forwards;
+}
+
+/* === Tool === */
+.coffee-tool {
+  padding: 0 var(--padding-desktop) 120px;
+}
+
+.coffee-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* === Steps === */
+.coffee-step {
+  padding: 48px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.coffee-step-label {
+  display: block;
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.3);
+  margin-bottom: 24px;
+}
+
+/* === Method Grid === */
+.method-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.method-btn {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.5);
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 100px;
+  padding: 9px 20px;
+  cursor: pointer;
+  transition: color 0.2s var(--ease), border-color 0.2s var(--ease), background 0.2s var(--ease);
+}
+
+.method-btn:hover {
+  color: rgba(255, 255, 255, 0.85);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.method-btn:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.method-btn.is-active {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+  background: rgba(242, 128, 170, 0.06);
+}
+
+/* === Controls row (servings + ratio) === */
+.coffee-controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+.coffee-step--inline {
+  border-bottom: none;
+  border-right: 1px solid rgba(255, 255, 255, 0.07);
+  padding-right: 48px;
+}
+
+.coffee-step--inline:last-child {
+  border-right: none;
+  padding-right: 0;
+  padding-left: 48px;
+}
+
+.coffee-controls {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+/* === Ratio Slider === */
+.ratio-display {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.ratio-prefix {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  color: rgba(255, 255, 255, 0.3);
+  line-height: 1;
+}
+
+.ratio-value {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--color-text);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  min-width: 3ch;
+}
+
+.ratio-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.ratio-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  cursor: pointer;
+  transition: transform 0.15s var(--ease), box-shadow 0.15s var(--ease);
+  box-shadow: 0 0 0 0 rgba(242, 128, 170, 0.3);
+}
+
+.ratio-slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  border: none;
+  cursor: pointer;
+}
+
+.ratio-slider:hover::-webkit-slider-thumb,
+.ratio-slider:focus::-webkit-slider-thumb {
+  transform: scale(1.2);
+  box-shadow: 0 0 0 6px rgba(242, 128, 170, 0.15);
+}
+
+.ratio-slider:focus {
+  outline: none;
+}
+
+.ratio-hint {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.6875rem;
+  color: rgba(255, 255, 255, 0.25);
+  letter-spacing: 0.06em;
+}
+
+/* === Result Card === */
+.coffee-result {
+  margin-top: 48px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 4px;
+  padding: 48px;
+  box-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.3),
+    0 1px 4px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.result-row {
+  display: flex;
+  align-items: center;
+}
+
+.result-row--main {
+  gap: 0;
+  padding-bottom: 36px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  margin-bottom: 28px;
+}
+
+.result-stat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.result-stat:last-child {
+  align-items: flex-end;
+}
+
+.result-divider {
+  width: 1px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.08);
+  flex-shrink: 0;
+}
+
+.result-label {
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.result-value {
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-weight: 400;
+  color: var(--color-text);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.result-unit {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.35);
+  letter-spacing: 0.04em;
+}
+
+/* === Grind Row === */
+.result-row--grind {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  margin-bottom: 20px;
+}
+
+.result-grind-label {
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.result-grind-info {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.result-clicks {
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  font-weight: 400;
+  color: var(--color-accent);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.result-clicks-word {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.35);
+  letter-spacing: 0.06em;
+}
+
+.result-grind-sep {
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 0.875rem;
+}
+
+.result-grind-range-label {
+  font-size: 0.6875rem;
+  color: rgba(255, 255, 255, 0.25);
+  letter-spacing: 0.06em;
+}
+
+.result-grind-range {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.result-grind-name {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+}
+
+/* === Meta Row === */
+.result-row--meta {
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.result-meta {
+  font-size: 0.6875rem;
+  color: rgba(255, 255, 255, 0.25);
+  letter-spacing: 0.06em;
+}
+
+.result-meta-sep {
+  color: rgba(255, 255, 255, 0.15);
+  font-size: 0.75rem;
+}
+
+.result-temp {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* === Animations === */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes expandRule {
+  to { width: 64px; }
+}
+
+/* === Tablet (≤1024px) === */
+@media (max-width: 1024px) {
+  .coffee-hero {
+    padding: 100px var(--padding-tablet) 32px;
+  }
+
+  .coffee-tool {
+    padding: 0 var(--padding-tablet) 80px;
+  }
+
+  .coffee-result {
+    padding: 36px;
+  }
+}
+
+/* === Mobile (≤768px) === */
+@media (max-width: 768px) {
+  .coffee-hero {
+    padding: 80px var(--padding-mobile) 24px;
+  }
+
+  .coffee-headline {
+    font-size: clamp(2rem, 8vw, 44px);
+  }
+
+  .coffee-tool {
+    padding: 0 var(--padding-mobile) 64px;
+  }
+
+  .coffee-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .coffee-step--inline {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    padding-right: 0;
+  }
+
+  .coffee-step--inline:last-child {
+    padding-left: 0;
+  }
+
+  .coffee-result {
+    padding: 28px 20px;
+  }
+
+  .result-value {
+    font-size: clamp(2.5rem, 10vw, 4rem);
+  }
+}

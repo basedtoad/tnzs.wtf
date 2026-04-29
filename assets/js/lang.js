@@ -78,6 +78,25 @@
       'pong.win':    'YOU WIN',
       'pong.lose':   'YOU LOSE',
       'pong.again':  'Press Space or tap to play again',
+
+      /* Coffee */
+      'coffee.eyebrow':          'Brew Guide',
+      'coffee.headline':         'Coffee Calculator',
+      'coffee.method':           'Brewing Method',
+      'coffee.servings':         'Servings',
+      'coffee.ratio':            'Ratio',
+      'coffee.recommended':      'Recommended',
+      'coffee.coffee':           'Coffee',
+      'coffee.water':            'Water',
+      'coffee.grind':            'Grind Size',
+      'coffee.clicks':           'clicks',
+      'coffee.clickRange':       'range',
+      'coffee.temp':             'Water Temp',
+      'coffee.grinder':          'Timemore C3S',
+      'coffee.grind.fine':       'Fine',
+      'coffee.grind.mediumfine': 'Medium Fine',
+      'coffee.grind.medium':     'Medium',
+      'coffee.grind.coarse':     'Coarse',
     },
 
     es: {
@@ -152,6 +171,25 @@
       'pong.win':    'GANASTE',
       'pong.lose':   'PERDISTE',
       'pong.again':  'Presiona Espacio o toca para jugar de nuevo',
+
+      /* Coffee */
+      'coffee.eyebrow':          'Guía de Preparación',
+      'coffee.headline':         'Calculadora de Cafe',
+      'coffee.method':           'Método',
+      'coffee.servings':         'Tazas',
+      'coffee.ratio':            'Proporción',
+      'coffee.recommended':      'Recomendado',
+      'coffee.coffee':           'Café',
+      'coffee.water':            'Agua',
+      'coffee.grind':            'Molido',
+      'coffee.clicks':           'clics',
+      'coffee.clickRange':       'rango',
+      'coffee.temp':             'Temperatura del agua',
+      'coffee.grinder':          'Timemore C3S',
+      'coffee.grind.fine':       'Fino',
+      'coffee.grind.mediumfine': 'Medio Fino',
+      'coffee.grind.medium':     'Medio',
+      'coffee.grind.coarse':     'Grueso',
     }
   };
 
